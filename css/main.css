@@ -1,0 +1,122 @@
+.kachel {
+	padding:15% 0;
+	margin:5px;
+	min-height:80px;
+	font-size:80%;
+}
+/*Beschleunigung web-view*/
+div.page {
+	-webkit-transform:translate3d(0,0,0);
+}
+#img_btn {
+	background:transparent;
+	border:none;
+}
+#balance_img_btn {
+	background:transparent;
+	border:none !important;
+}
+/* Ausblenden der Input-Box des Sliders */
+#noInputBox .ui-slider-input {
+	display:none !important;
+}
+/* Ausgrauen der aktiven Buttons, NavBar */
+.ui-btn-active {
+	background:#686869 !important;
+}
+#grid_physioExercise4 .ui-block-a {
+	width:15% !important;
+	vertical-align:middle;
+	line-height:65px;
+}
+#grid_physioExercise4 .ui-block-b {
+	width:25% !important;
+	vertical-align:middle;
+	line-height:50px;
+	margin:0 auto;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+#grid_physioExercise4 .ui-block-c {
+	width:15% !important;
+	vertical-align:middle;
+	line-height:65px;
+}
+#grid_physioExercise4 .ui-block-d {
+	width:25% !important;
+	vertical-align:middle;
+	line-height:50px;
+	margin:0 auto;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+#grid_physioExercise2 .ui-block-a {
+	width:40% !important;
+	vertical-align:middle;
+	line-height:50px;
+}
+#grid_physioExercise2 .ui-block-b {
+	width:30% !important;
+	vertical-align:middle;
+	line-height:50px;
+}
+#grid_physioOverview .ui-block-a {
+	width:25% !important;
+	vertical-align:middle;
+	line-height:50px;
+}
+#grid_physioOverview .ui-block-b {
+	width:75% !important;
+	vertical-align:middle;
+	line-height:50px;
+}
+#grid_settings .ui-block-a {
+	width:50% !important;
+	vertical-align:middle;
+	line-height:65px;
+}
+#grid_settings .ui-block-b {
+	width:50% !important;
+}
+#grid_progressOutput .ui-block-a {
+	width:50% !important;
+	vertical-align:middle;
+	/*margin-top: 20px*/
+	margin:0 auto;
+	margin-left:auto;
+	margin-right:auto;
+	line-height:50px;
+	text-align:left;
+}
+#grid_progressOutput .ui-block-b {
+	width:50% !important;
+	vertical-align:middle;
+	line-height:65px;
+}
+.nav-custom .ui-btn {
+	padding-top:40px !important;
+}
+.nav-custom .ui-btn:after {
+	width:30px !important;
+	height:30px !important;
+	margin-left:-15px !important;
+	box-shadow:none !important;
+	-moz-box-shadow:none !important;
+	-webkit-box-shadow:none !important;
+	-webkit-border-radius:0 !important;
+	border-radius:0 !important;
+}
+#nav_dashboard:after {
+	background:url("images/calendar.png") 50% 50% no-repeat;
+	background-size:22px 22px;
+}
+#nav_balance:after {
+	background:url("images/balance_white.png") 50% 50% no-repeat;
+	background-size:22px 22px;
+}
+#nav_physio:after {
+	background:url("images/runner_white.png") 50% 50% no-repeat;
+	background-size:14px 20px;
+}

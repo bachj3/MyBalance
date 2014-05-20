@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>MyBalance</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+		<!-- Theme comes first, then structure. -->
+		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
+		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
+		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
+		<link href="css/main.css" rel="stylesheet">
+
+		<!-- phonegap-scripts -->
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+		<!-- jquery-scripts -->
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+
+		<script src="http://debug.phonegap.com/target/target-script-min.js#Bachelor14"></script>
+
+	</head>
+
+	<body>
+		<div data-role="page" id="page_Dashboard" class="page">
+			<div data-role="header" align="center" data-position="fixed" id="#header">
+				<h1>Dashboard</h1>
+			</div>
+
+			<div data-role="content" data-theme="e" id="#content">
+				<fieldset class="ui-grid-b">
+					<div class="ui-block-a">
+						<a href="#popupDrinks" class="kachel" data-rel="popup" data-role="button" data-position-to="window" data-inline="false" data-theme="g">Fl&uumlssigkeiten
+						</br></br>
+						<fieldset class="ui-grid-a">
+							<div class="ui-block-a" style="padding-left: 5px; padding-top: 5px">
+								<label  id="lbl_drink">5</label>
+							</div>
+							<div class="ui-block-b" style="padding-right: 5px">
+								<img id="mood_image" src="img/icn/drink.png" data-inline="true" heigth="30px">
+							</div>
+						</fieldset> </a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#popupMood" class="kachel" data-rel="popup" data-role="button" data-position-to="window" data-inline="false" data-theme="f">Stimmung
+						</br></br> <img id="mood_image" src="img/icn/thumbs-up.png" width="30px" heigth="30px"></a>
+					</div>
+					<div class="ui-block-c">
+						<a href="#popupActivity" class="kachel" data-rel="popup" data-role="button" data-position-to="window" data-inline="false" data-theme="d">Aktivit&aumlt
+						</br></br> <img id="activity_image" src="img/icn/exercise.png" heigth="30px"></a>
+					</div>
+					<div class="ui-block-a">
+						<a href="#popupSleep" class="kachel" data-rel="popup" data-role="button" data-position-to="window" data-inline="false" data-theme="h">Schlaf
+						</br></br> <label id="lbl_sleep">8h 34</label></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#popupOffice" class="kachel" data-rel="popup" data-role="button" data-position-to="window" data-inline="false" data-theme="e">Sitzen
+						</br></br> <img id="office_image" src="img/icn/chair.png" heigth="30px"></a>
+					</div>
+					<div class="ui-block-c">
+						<a href="page_progress.html" class="kachel" data-transition="none" data-role="button" data-inline="false" data-theme="b">Verlauf
+						</br></br> <img id="statistic_image" src="img/icn/statistics.png" heigth="30px"></a>
+					</div>
+					<div class="ui-block-a">
+						<a href="#popupFood" class="kachel" data-rel="popup" data-role="button" data-position-to="window" data-inline="false" data-theme="f">Ern&aumlhrung
+						</br></br> <img id="profile_image" src="img/icn/restaurant.png" width="30px" heigth="30px"> </a>
+					</div>
+					<div class="ui-block-b">
+						<a href="settings.html" class="kachel" data-transition="none" data-role="button" data-inline="false" data-theme="d">Profil
+						</br></br> <img id="profile_image" src="img/icn/profil.png" width="30px" height="30px"> </a>
+					</div>
+					<div class="ui-block-c">
+						<a href="reminder_settings.html" class="kachel" data-transition="none" data-role="button" data-inline="false" data-theme="g">Erinnerungen
+						</br></br> <img id="remind_image" src="img/icn/reminder.png" width="30px" heigth="30px"> </a>
+					</div>
+				</fieldset>
+				<button id="refresh" style="background:transparent; height:40px; border: none;">
+					refresh
+				</button>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" id="#footer">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="page_dashboard.html" data-transition="slide" data-icon="grid" class="ui-btn-active ui-state-persist">Dashboard</a>
+						</li>
+						<li>
+							<a href="page_balance.html"data-transition="slide" id="nav_balance" data-icon="custom">Balance</a>
+						</li>
+						<li>
+							<a href="page_physio.html" data-transition="slide" id="nav_physio" data-icon="custom" >Aktivit&aumlt</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<!-- Popup Parameter-Stimmung  -->
+			<div data-role="popup" id="popupMood">
+				<p>
+					<form>
+						<div style="padding:10px 20px;">
+							<h3>Stimmung</h3>
+							<fieldset class="ui-grid-c">
+								<div class="ui-block-a" style="padding-left:1px; padding-right:1px">
+									<button data-theme="e" >
+										<img src="img/icn/Smiley4.png"/>
+									</button>
+								</div>
+								<div class="ui-block-b" style="padding-left:1px; padding-right:1px">
+									<button data-theme="e">
+										<img src="img/icn/Smiley3.png"/>
+									</button>
+								</div>
+								<div class="ui-block-c" style="padding-left:1px; padding-right:1px">
+									<button data-theme="e">
+										<img src="img/icn/Smiley2.png"/>
+									</button>
+								</div>
+								<div class="ui-block-d" style="padding-left:1px; padding-right:1px">
+									<button data-theme="e">
+										<img src="img/icn/Smiley1.png"/>
+									</button>
+								</div>
+							</fieldset>
+						</div>
+					</form>
+				<p>
+			</div>
+
+			<!-- Popup Parameter-Aktivität  -->
+			<div data-role="popup" id="popupActivity">
+				<p >
+					<form >
+						<div style="padding:10px 20px;" >
+							<h3>Aktivit&aumlt erfassen</h3>
+
+							<select id="activityHrs" name="activityHrs" data-mini="true" data-theme="e" >
+								<option value="1">01 h</option>
+								<option value="2">02 h</option>
+								<option value="3">03 h</option>
+								<option value="4">04 h</option>
+								<option value="5">05 h</option>
+								<option value="6">06 h</option>
+								<option value="7">07 h</option>
+								<option value="8">08 h</option>
+								<option value="9">09 h</option>
+								<option value="10">10 h</option>
+								<option value="11">mehr...</option>
+							</select>
+
+							<label for="slider_intensity">Intensit&aumlt</label>
+							<input type="range" id="slider_intensity" value="1" min="0" max="15" step="1" data-theme="e">
+							</br>
+							<button type="submit" data-theme="b">
+								OK
+							</button>
+							<button type="cancel" data-theme="a">
+								Abbrechen
+							</button>
+
+							<h3>Aktivit&aumlt ausf&uumlhren</h3>
+							<a href="page_physio.html" data-role="button"data-inline="false" data-theme="e">Zu den Aktivit&aumlten</a>
+
+						</div>
+					</form>
+				<p>
+			</div>
+
+			<!-- Popup Parameter-Schlaf  -->
+			<div data-role="popup" id="popupSleep">
+				<p>
+					<form>
+						<div style="padding:10px 20px;">
+							<h3>Schlaf aufzeichnen</h3>
+							<label for="input_sleepNoon">Von</label>
+							<input type="text" name="sleepNoon" id="input_sleepNoon" value="" placeholder="22:00">
+							<label for="input_sleepMorning">Bis</label>
+							<input type="text" name="sleepMorning" id="input_sleepMorning" value="" placeholder="07:00">
+							<fieldset data-role="controlgroup" data-mini="true" data-theme="c">
+								<legend>
+									Qualit&aumlt
+								</legend>
+								<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+								<label for="radio-choice-1">erholsam</label>
+
+								<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+								<label for="radio-choice-2">nicht erholsam</label>
+							</fieldset>
+							<button type="submit" data-theme="b">
+								OK
+							</button>
+							<button type="cancel" data-theme="a">
+								Abbrechen
+							</button>
+						</div>
+					</form>
+				<p>
+			</div>
+
+			<!-- Popup Parameter-Sitzen  -->
+			<div data-role="popup" id="popupOffice">
+				<p>
+					<form>
+						<div style="padding:10px 20px;">
+							<h3>Zeit im Sitzen</h3>
+							<div class="ui-field-contain">
+								<select id="officeHrs" name="officeHrs" data-mini="true" data-theme="e">
+									<option value="1">01 h</option>
+									<option value="2">02 h</option>
+									<option value="3">03 h</option>
+									<option value="4">04 h</option>
+									<option value="5">05 h</option>
+									<option value="6">06 h</option>
+									<option value="7">07 h</option>
+									<option value="8">08 h</option>
+									<option value="9">09 h</option>
+									<option value="10">10 h</option>
+									<option value="11">mehr...</option>
+								</select>
+							</div>
+							<button type="submit" data-theme="b">
+								OK
+							</button>
+							<button type="cancel" data-theme="a">
+								Abbrechen
+							</button>
+						</div>
+					</form>
+				<p>
+			</div>
+
+			<!-- Popup Parameter-Flüssigkeiten  -->
+			<div data-role="popup" id="popupDrinks">
+				<p>
+					<form>
+						<div style="padding:10px 20px;">
+							<h3>Anzahl Gl&aumlser unges&uumlsst</h3>
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a" style="padding-right: 2px">
+									<button data-theme="e">
+										-1
+									</button>
+								</div>
+								<div class="ui-block-b" style="padding-left: 2px">
+									<button data-theme="e">
+										+1
+									</button>
+								</div>
+							</fieldset>
+
+						</div>
+					</form>
+				<p>
+			</div>
+			<!-- Popup Parameter-Ernährung  -->
+			<div data-role="popup" id="popupFood">
+				<p>
+					<form>
+						<div style="padding:10px 20px;" style="padding-right: 2px">
+							<h3>Ern&aumlhrung</h3>
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<button  data-theme="e">
+										-1
+									</button>
+								</div>
+								<div class="ui-block-b" style="padding-left: 2px"s>
+									<button  data-theme="e">
+										+1
+									</button>
+								</div>
+							</fieldset>
+							<button type="submit" data-theme="b">
+								OK
+							</button>
+							<button type="cancel" data-theme="a">
+								Abbrechen
+							</button>
+						</div>
+					</form>
+				<p>
+			</div>
+			<!-- <script type="text/javascript" src="js/write_database.js"></script> -->
+			<script type="text/javascript" src="js/main.js"></script>
+			<script type="text/javascript" src="js/fastclick.js"></script>
+
+		</div>
+
+	</body>
+
+</html>

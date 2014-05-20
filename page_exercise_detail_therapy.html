@@ -1,0 +1,175 @@
+<!-- <!DOCTYPE html> -->
+<html>
+
+	<head>
+		<title>MyBalance</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+		<!-- Theme comes first, then structure. -->
+		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
+		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
+		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
+		<link href="css/main.css" rel="stylesheet">
+
+		<!-- phonegap-scripts -->
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+		<!-- jquery-scripts -->
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="page_exercise_detail_therapy" class="page">
+
+			<div data-role="header" id="titel_exercise" data-position="fixed" data-add-back-btn="true">
+				<h1 id="e_name">0</h1>
+				<a data-role="button" data-transition="slide" id="btn_back" href="page_physio.html">zur&uumlck</a>
+				<a href="page_physio.html" data-transition="slide" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">n&aumlchste</a>
+			</div>
+
+			<!-- Grid-Layout Uebungsdetails -->
+			<div data-role="content">
+
+				<!-- Bilder -->
+
+				<button id="img_btn">
+					<img id="e_ref" src="img/Allgemein_Kniebeuge.png">
+				</button>
+
+				<!-- Beschreibung -->
+				<label id="e_description">0</label>
+				<a>-----------</a>
+
+				<!-- Details -->
+				<div id="grid_physioExercise4" class="ui-grid-d">
+
+					<!-- Sets -->
+					<div class="ui-block-a">
+						<!-- <label id="set_value">0</label> -->
+						<input type="text" name="set_value" id="set_value" value="0"  />
+					</div>
+					<div class="ui-block-b">
+						<label for="set_value">S&aumltze &nbsp &agrave; </label>
+					</div>
+					<!-- Repetitions -->
+					<div class="ui-block-c">
+						<!-- <label id="repetitions_value">0</label> -->
+						<input type="text" name="repetitions" id="repetitions_value" value="0"  />
+					</div>
+					<div class="ui-block-d">
+						<label for="repetitions_value">Wiederholungen</label>
+					</div>
+				</div>
+
+				<div id="grid_physioExercise2" class="ui-grid-a">
+					<!-- Weight -->
+					<div class="ui-block-a">
+						<label for="weight_value">Gewicht</label>
+					</div>
+					<div class="ui-block-b">
+						<!-- <label id="weight_value">0</label> -->
+						<input type="text" name="weight" id="weight_value" value="0"  />
+					</div>
+					<!-- Duration -->
+					<div class="ui-block-a">
+						<label for="duration_value">Dauer</label>
+					</div>
+					<div class="ui-block-b">
+						<!-- <label id="duration_value">0</label> -->
+						<input type="text" name="duration" id="duration_value" value="0"  />
+					</div>
+					<!-- Rest -->
+					<div class="ui-block-a">
+						<label for="repetition_value">Pause</label>
+					</div>
+					<div class="ui-block-b">
+						<!-- <label id="rest_value">0</label> -->
+						<input type="text" name="rest" id="rest_value" value="0"  />
+					</div>
+				</div>
+
+				<div id="grid_physioExercise_buttons" class="ui-grid-a">
+					<div class="ui-block-a">
+						<a data-role="button" id="btn_notiz" href="#popupMark" data-rel="popup" data-position-to="window" data-theme="e">Notiz</a>
+					</div>
+					<div class="ui-block-b">
+						<a data-role="button" id="btn_Schmerz" href="#popupPain" data-rel="popup" data-position-to="window" data-theme="e">Schmerzen</a>
+					</div>
+				</div>
+
+				<div id="grid_physioExercise_confirm" class="ui-grid-solo">
+					<a data-role="button" id="btn_bestaetigung" data-shadow="false" data-theme="b">Best&aumltigung</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="page_dashboard.html" data-transition="slide" data-icon="grid" >Dashboard</a>
+						</li>
+						<li>
+							<a href="page_balance.html"data-transition="slide" id="nav_balance" data-icon="custom" >Balance</a>
+						</li>
+						<li>
+							<a href="page_physio.html" data-transition="slide" id="nav_physio" data-icon="custom" class="ui-btn-active ui-state-persist">Aktivit&aumlt</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Popup Schmerzerfassung -->
+			<div data-role="popup" id="popupPain">
+				<p>
+					<form>
+						<div style="padding:10px 20px;">
+							<h3>Schmerzerfassung</h3>
+							<div data-role="fieldcontain" id="slider_pain" >
+								<input type="range" id="slider_pain-range" value="5" min="0" max="10" step="0" data-theme="e">
+								<label for="slider_pain-range">Keine Schmerzen</label>
+								<!-- <label for="slider_pain-range" text-align:"right">Grosse Schmerzen</label> -->
+							</div>
+
+							<input type="checkbox" id="checkb_painkillers" data-theme="e">
+							<label for="checkb_painkillers" >Schmerzmittel eingenommen</label>
+							<label>Pers&oumlnliche Notizen:</label>
+							<input type="text" id="lbl_notes" style="height:44px">
+							<button type="submit" data-theme="b">
+								OK
+							</button>
+							<button type="cancel" data-theme="a">
+								Abbrechen
+							</button>
+						</div>
+					</form>
+				<p>
+			</div>
+
+			<!-- Popup Exercise-Markierung  -->
+			<div data-role="popup" id="popupMark">
+				<p>
+					<form>
+						<div style="padding:10px 20px;">
+							<h3>Notiz</h3>
+							<input type="text" id="lbl_notes" style="height:44px">
+							<button type="submit" data-theme="b">
+								OK
+							</button>
+							<button type="cancel" data-theme="a">
+								Abbrechen
+							</button>
+						</div>
+					</form>
+				<p>
+			</div>
+			<script type="text/javascript" src="js/main.js"></script>
+			<script type="text/javascript" src="js/fastclick.js"></script>
+			<script type="text/javascript" src="js/purl.js"></script>
+			<script type="text/javascript" src="js/exercise_detail.js"></script>
+		</div>
+
+	</body>
+
+</html>

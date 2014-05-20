@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>MyPhysioApp</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Theme comes first, then structure. -->
+		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
+		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
+		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
+		<link href="css/main.css" rel="stylesheet">
+
+		<!-- phonegap-scripts -->
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+		<!-- jquery-scripts -->
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
+
+	</head>
+
+	<body>
+		<div data-role="page" id="page_verlauf" class="page">
+			<div data-role="header" data-position="fixed" data-add-back-btn="true">
+				<h1>Verlauf</h1>
+			</div>
+
+			<!-- Zeitspanne -->
+			<div data-role="content">
+
+				<div id="grid_progressOutput" class="ui-grid-a">
+					<div class="ui-block-a" style="padding-top: 16px">
+
+						<select id="weight" name="weight" data-theme="e" data-mini="true">
+							<option value="Aktivit&aumlt">Aktivit&aumlt</option>
+							<option value="Getr&aumlnke">Getr&aumlnke</option>
+							<option value="Schlaf">Schlaf</option>
+							<option value="Stimmung">Stimmung</option>
+						</select>
+
+					</div>
+					<div class="ui-block-b">
+
+						<fieldset data-role="controlgroup" id="radiobtn_group" data-type="horizontal" data-mini="true">
+							<input type="radio" id="radiobtn1" checked="checked">
+							<label for="radiobtn1">1T</label>
+							<input type="radio" id="radio2" name="radiobtn1">
+							<label for="radio2">1W</label>
+							<input type="radio" id="radio3" name="radiobtn1">
+							<label for="radio3">1M</label>
+						</fieldset>
+
+					</div>
+				</div>
+				<!--Bild / grafische Darstellung Verlauf -->
+				<div align="center">
+					<img id="progress" src="img/Verlauf Excel_small.png">
+				</div>
+
+				<!-- Labels inkl. DB-Output -->
+				<div id="grid_progressOutput" class="ui-grid-a">
+
+					<div class="ui-block-a">
+						<label for="training">&Oslash Trainings-Min / Tag</label>
+					</div>
+					<div class="ui-block-b">
+						<input type="text" name="training" id="input_training" value="" placeholder="DB Training" />
+					</div>
+
+					<div class="ui-block-a">
+						<label for="pain">&Oslash Schmerzen</label>
+					</div>
+					<div class="ui-block-b">
+						<input type="text" name="pain" id="input_pain" value="" placeholder="DB Schmerz" />
+					</div>
+
+					<div class="ui-block-a">
+						<label for="number">Anzahl Trainings</label>
+					</div>
+					<div class="ui-block-b">
+						<input type="text" name="number" id="input_number" value="" placeholder="DB Anzahl Trainings" />
+					</div>
+
+					<div class="ui-block-a">
+						<label for="potential">Gr&oumlsstes Potential</label>
+					</div>
+					<div class="ui-block-b">
+						<input type="text" name="potential" id="input_potential" value="" placeholder="DB Potential" />
+					</div>
+				</div>
+
+				<div data-role="footer" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li>
+							<a href="page_dashboard.html" data-transition="slide" data-icon="grid" class="ui-btn-active ui-state-persist">Dashboard</a>
+						</li>
+						<li>
+							<a href="page_balance.html"data-transition="slide" id="nav_balance" data-icon="custom" >Balance</a>
+						</li>
+						<li>
+							<a href="page_physio.html" data-transition="slide" id="nav_physio" data-icon="custom" >Aktivit&aumlt</a>
+						</li>
+						</ul>
+					</div>
+				</div>
+				<script type="text/javascript" src="js/noDelay.js"></script>
+			</div>
+
+	</body>
+
+</html>

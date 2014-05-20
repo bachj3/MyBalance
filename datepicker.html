@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>MyBalance</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="js/jquery-1.11.0.js"></script>
+		<!-- Muss zwischen jquery und jquery mobile stehen -->
+		<script>
+            //reset type=date inputs to text
+            $(document).bind("mobileinit", function() {
+                $.mobile.page.prototype.options.degradeInputs.date = true;
+            });
+		</script>
+
+		<script src="js/jquery.mobile-1.4.2.js"></script>
+
+		<script src="js/index.js"></script>
+
+		<!-- Theme comes first, then structure. -->
+		<!-- <link href="css/jquery.mobile-1.4.2.css" rel="stylesheet"> -->
+		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
+
+		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
+		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
+		<link href="css/main.css" rel="stylesheet">
+
+		<!-- Datepicker -->
+		<link rel="stylesheet" href="css/jquery.mobile.datepicker.css" />
+		<script src="jQuery.ui.datepicker.js"></script>
+		<script src="js/jquery.mobile.datepicker.js"></script>
+
+		<!-- Photoswipe -->
+		<script type="text/javascript" src="simple-inheritance.min.js"></script>
+		<script type="text/javascript" src="code-photoswipe-1.0.9.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="page_Dashboard">
+			<div data-role="header" align="center" data-position="fixed">
+				<h1>Dashboard</h1>
+			</div>
+
+			<div data-role="content" data-theme="e">
+
+				<input type="text" data-role="date" data-inline="false">
+
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="index.html" data-icon="grid" class="ui-btn-active ui-state-persist">Dashboard</a>
+						</li>
+						<li>
+							<a href="page_balance.html"id="nav_balance" data-icon="custom">Balance</a>
+						</li>
+						<li>
+							<a href="page_physio.html" id="nav_physio" data-icon="custom">Physio</a>
+						</li>
+						<li>
+							<a href="gallery.html">Gallery</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

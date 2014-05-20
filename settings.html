@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>MyBalance</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Theme comes first, then structure. -->
+		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
+		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
+		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
+		<link href="css/main.css" rel="stylesheet">
+
+		<!-- phonegap-scripts -->
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+		<!-- jquery-scripts -->
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+
+		<script src="http://debug.phonegap.com/target/target-script-min.js#Bachelor14"></script>
+
+	</head>
+
+	<body>
+		<div data-role="page" id="page_personalsettings" class="page">
+			<div data-role="header" data-position="fixed" data-add-back-btn="true">
+				<!-- <a data-role="button" data-transition="none" id="btn_back" href="page_dashboard.html">zur&uumlck</a> -->
+				<h1>Einstellungen</h1>
+				<!-- <a href="#popupSettings" data-icon="gear" data-iconpos="notext" data-rel="popup" class="ui-btn-right" data-position-to="window">Options</a> -->
+			</div>
+			<div data-role="content">
+				<!-- Bildli -->
+				<img id="settings_image"src="img/icn/profil.png" width="30px" heigth="30px" style="display: block; margin: 0 auto">
+
+				<!-- Form -->
+
+				<div class="ui-field-contain" data-type="horizontal">
+					<label for="name">Name</label>
+					<input type="text" name="text" id="name" value="" placeholder="Ihr Name?">
+				</div>
+
+				<fieldset data-role="controlgroup" data-mini="true" data-type="horizontal" data-theme="e">
+					<legend>
+						Geburtstag
+					</legend>
+
+					<select name="SelDateOfBirthDay" id="SelDateOfBirthDay" >
+						<option value="">Tag</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+					<select name="SelDateOfBirthMonth" id="SelDateOfBirthMonth">
+						<option value="">Monat</option>
+						<option value="jan">Januar</option>
+						<option value="feb">Februar</option>
+						<option value="mar">M&aumlrz</option>
+					</select>
+					<select name="SelDateOfBirhtYear" id="SelDateOfBirhtYear">
+						<option value="">Jahr</option>
+						<option value="2011">2011</option>
+						<option value="2010">2010</option>
+						<option value="2019">2009</option>
+					</select>
+				</fieldset>
+
+				<div class="ui-field-contain">
+					<label for="size">Gr&oumlsse</label>
+					<select id="size" name="size" data-mini="true" data-theme="e">
+						<option value="150">150</option>
+						<option value="155">155</option>
+						<option value="160">160</option>
+					</select>
+				</div>
+
+				<div class="ui-field-contain">
+					<label for="weight">Gewicht</label>
+					<select id="weight" name="weight" data-mini="true" data-theme="e">
+						<option value="50">50</option>
+						<option value="55">55</option>
+						<option value="65">65</option>
+					</select>
+
+				</div>
+				<fieldset data-role="controlgroup" data-mini="true" data-theme="c">
+					<legend>
+						Geschlecht
+					</legend>
+					<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+					<label for="radio-choice-1">weiblich</label>
+
+					<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+					<label for="radio-choice-2">m&aumlnnlich</label>
+				</fieldset>
+
+				<!-- <a href="reminder_settings.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="d">Erinnerungen</a> -->
+
+				<a href="settings.html" data-role="button" data-inline="false" data-theme="b">Speichern</a>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<ul>
+							<li>
+								<a href="page_dashboard.html" data-transition="slide" data-icon="grid" class="ui-btn-active ui-state-persist">Dashboard</a>
+							</li>
+							<li>
+								<a href="page_balance.html"data-transition="slide" id="nav_balance" data-icon="custom" >Balance</a>
+							</li>
+							<li>
+								<a href="page_physio.html" data-transition="slide" id="nav_physio" data-icon="custom" >Aktivit&aumlt</a>
+							</li>
+						</ul>
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>

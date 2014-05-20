@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>MyPhysioApp</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+		<!-- Theme comes first, then structure. -->
+		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
+		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
+		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
+		<link href="css/main.css" rel="stylesheet">
+
+		<!-- phonegap-scripts -->
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+		<!-- jquery-scripts -->
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+		
+		<script src="http://debug.phonegap.com/target/target-script-min.js#Bachelor14"></script>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="page_balance" class="page">
+			<div data-role="header" data-position="fixed">
+				<h1>Balance</h1>
+			</div>
+			<div data-role="content">
+				<!-- Bildli -->
+				<button id="balance_img_btn" name="image" type="button">
+					<img id="balance_image" src="img/icn/balanced.png"  style="display: block; margin: 0 auto">
+				</button>
+
+				<div class="div-widget" id="noInputBox">
+					<div data-role="fieldcontain" id="slider1">
+						<label for="slider1">Ern&aumlhrung</label>
+						<input type="range" id="slider1" value="5" min="0" max="10"
+						step="1" data-mini="true" data-theme="a" data-track-theme="e" disabled="disabled" >
+					</div>
+					<div data-role="fieldcontain" id="slider2">
+						<label for="slider2">Bewegung</label>
+						<input type="range" id="slider2" value="5" min="0" max="10"
+						step="1" data-mini="true" data-theme="a" data-track-theme="b" disabled="disabled">
+					</div>
+					<div data-role="fieldcontain" id="slider3">
+						<label for="slider3">Erholung</label>
+						<input type="range" id="slider3" value="5" min="0" max="10"
+						step="1" data-mini="true" data-theme="a" data-track-theme="f" disabled="disabled">
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="page_dashboard.html" data-transition="slide" data-icon="grid" >Dashboard</a>
+						</li>
+						<li>
+							<a href="page_balance.html"data-transition="slide" id="nav_balance" data-icon="custom" class="ui-btn-active ui-state-persist">Balance</a>
+						</li>
+						<li>
+							<a href="page_physio.html" data-transition="slide" id="nav_physio" data-icon="custom" >Aktivit&aumlt</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<script type="text/javascript" src="js/main.js"></script>
+			<script type="text/javascript" src="js/fastclick.js"></script>
+			<script type="text/javascript" src="js/page_balance.js"></script>
+
+		</div>
+
+	</body>
+
+</html>

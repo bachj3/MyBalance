@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>MyBalance</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Theme comes first, then structure. -->
+		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
+		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
+		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
+		<link href="css/main.css" rel="stylesheet">
+
+		<!-- phonegap-scripts -->
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+		<!-- jquery-scripts -->
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="page_exercise_detail" class="page">
+
+			<div data-role="header" id="titel_exercise" data-position="fixed" data-add-back-btn="true">
+				<h1>Lesen</h1>
+				<a data-role="button" data-transition="slide" id="btn_back" href="page_physio.html">zur&uumlck</a>
+				<a href="page_physio.html" data-transition="slide" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">n&aumlchste</a>
+			</div>
+
+			<!-- Grid-Layout Uebungsdetails -->
+			<div data-role="content">
+
+				<!-- Bilder -->
+
+				<button id="img_btn">
+					<img id="img_reader" src="img/Lesen.png">
+				</button>
+
+				<!-- Beschreibung -->
+				<label id="txt_description">Lesen Sie doch wieder einmal ein Buch.</label>
+				<a>-----------</a>
+
+				<!-- Details -->
+
+				<div id="grid_physioExercise2" class="ui-grid-a">
+
+					<div class="ui-block-a">
+						<label for="input_duration">Dauer</label>
+					</div>
+					<div class="ui-block-b">
+						<input type="text" name="input_duration" id="input_repetition" value="00:00:30"  />
+					</div>
+
+					<div class="ui-block-a">
+						<span id="lbl_descriptionEx_break">Pause</span>
+					</div>
+					<div class="ui-block-b">
+						<input type="text" name="input_repetition" id="input_repetition" value="00:00:15"  />
+					</div>
+				</div>
+
+				<div id="grid_physioExercise_confirm" class="ui-grid-solo">
+					<a data-role="button" id="btn_bestaetigung" data-shadow="false" data-theme="b">Best&aumltigung</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="page_dashboard.html" data-transition="slide" data-icon="grid" >Dashboard</a>
+						</li>
+						<li>
+							<a href="page_balance.html"data-transition="slide" id="nav_balance" data-icon="custom" >Balance</a>
+						</li>
+						<li>
+							<a href="page_physio.html" data-transition="slide" id="nav_physio" data-icon="custom" class="ui-btn-active ui-state-persist">Aktivit&aumlt</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--
+			<script type="text/javascript" src="js/noDelay.js"></script> -->
+		</div>
+
+	</body>
+
+</html>
