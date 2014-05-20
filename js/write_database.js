@@ -30,7 +30,7 @@ var Ref = ["Fuss_Dorsalflexion_Anspannungsuebung.png", "Fuss_Eversion_Sitz.png",
 document.addEventListener("deviceready", function() {
     db = window.openDatabase("Physio", "1.0", "physio", 2000000);
     console.log("deviceready_write_database");
-    db.transaction(deleteTable, errorCB, successCB);
+    // db.transaction(deleteTable, errorCB, successCB);
     db.transaction(writeExercises, errorCB, successCB);
     // alert("table filled");
 }, false);
@@ -50,7 +50,6 @@ window.onload = function() {
 
 function deleteTable(tx) {
     tx.executeSql('DROP TABLE IF EXISTS Program');
-    tx.executeSql('DROP TABLE IF EXISTS Program3');
 
 }
 
