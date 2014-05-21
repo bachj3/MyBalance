@@ -32,25 +32,12 @@ document.addEventListener("deviceready", function() {
     console.log("deviceready_write_database");
     db.transaction(deleteTable, errorCB, successCB);
     db.transaction(writeExercises, errorCB, successCB);
-    // alert("table filled");
+    console.log("table filled");
 }, false);
 
-window.onload = function() {
-
-    // document.getElementById("write_db").addEventListener('click', function() {
-    // db.transaction(writeDB, errorCB, successCB);
-    // alert("table written");
-    // });
-    // document.getElementById("delete_db").addEventListener('click', function() {
-    // db.transaction(deleteTable, errorCB, successCB);
-    // alert("table deleted");
-    // });
-
-};
 
 function deleteTable(tx) {
     tx.executeSql('DROP TABLE IF EXISTS Program');
-    tx.executeSql('DROP TABLE IF EXISTS Program3');
 
 }
 
@@ -65,10 +52,9 @@ function writeExercises(tx) {
 }
 
 function errorCB(tx, err) {
-    alert(err);
+    console.log(err);
 }
 
 function successCB() {
-    // alert("ok");
     console.log("successCB_write_database");
 }

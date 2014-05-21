@@ -13,6 +13,7 @@
 
 		<!-- phonegap-scripts -->
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 
 		<!-- jquery-scripts -->
 		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
@@ -31,7 +32,7 @@
 				</h1>
 
 				<a data-role="button" data-transition="slide" id="btn_back" href="page_physio.html">zur&uumlck</a>
-				<a href="page_physio.html" data-transition="slide" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">n&aumlchste</a>
+				<a href="#ref" data-transition="slide" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">n&aumlchste</a>
 			</div>
 
 			<!-- Grid-Layout Uebungsdetails -->
@@ -39,9 +40,9 @@
 
 				<!-- Bilder -->
 
-				<button id="img_btn">
+				<a data-role="button" id="img_btn" href="camera3.html">
 					<img id="img_selfie" src="img/no_image.png">
-				</button>
+				</a>
 
 				<!-- Beschreibung -->
 				<textarea cols="40" rows="8" name="txt_description" id="txt_description"></textarea>
@@ -164,7 +165,9 @@
 					</form>
 				<p>
 			</div>
-			<script type="text/javascript" src="js/noDelay.js"></script>
+			<script type="text/javascript" src="js/main.js"></script>
+			<script type="text/javascript" src="js/fastclick.js"></script>
+			<script type="text/javascript" src="js/purl.js"></script>
 		</div>
 
 	</body>
