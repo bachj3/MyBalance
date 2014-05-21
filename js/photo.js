@@ -23,7 +23,7 @@ function onPhotoDataSuccess(imageData) {
 
   // Get image handle
   //
-  var img_selfie = document.getElementById('img_selfie');
+  var img_selfie = document.getElementById('e_ref');
 
   // Unhide image elements
   //
@@ -45,7 +45,7 @@ function onPhotoURISuccess(imageURI) {
 
   // Get image handle
   //
-  var img_selfie = document.getElementById('img_selfie');
+  var img_selfie = document.getElementById('e_ref');
 
   // Unhide image elements
   //

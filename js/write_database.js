@@ -5,7 +5,7 @@ var IdCategory = ["3", "3", "3", "3", "1", "2", "4"];
 var IdProgram = ["2", "2", "1", "1", "100", "200", "400"];
 var P_Name = ["Fussprogramm", "Fussprogramm", "Kr&auml;ftigung Hand", "Kr&auml;ftigung Hand", "Bewegungsprogramm", "Entspannungsprogramm", "Eigenes Programm"];
 var IdExercise = ["7", "8", "11", "12", "101", "201", "401"];
-var E_Name = ["Dorsalflexion", "Eversion", "Hand Dorsalextension", "Hand Kneifkraft", "Schwimmen", "Lesen", "Meine &Uumlbung"];
+var E_Name = ["Dorsalflexion", "Eversion", "Hand Dorsalextension", "Hand Kneifkraft", "Schwimmen", "Lesen", "Meine Übung"];
 var E_Description = [
 "Setzen Sie Ihren gesunden Fuss auf den Fussr&uuml;cken Ihres verletzen Fusses und erzeugen Sie dabei eine entsprechende Spannung auf den Vorfuss.", 
 "Ein doppeltes Deuserband kommt &uuml;ber beide Fussr&uuml;cken. Bewegen Sie Ihr verletztes Bein maximal nach aussen, so dass das Deuserband maximal gespannt wird. Dann wird nur die Ferse auf den Boden gestellt.", 
