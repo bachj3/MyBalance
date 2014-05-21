@@ -5,7 +5,7 @@ var IdCategory = ["3", "3", "3", "3", "1", "2", "4"];
 var IdProgram = ["2", "2", "1", "1", "100", "200", "400"];
 var P_Name = ["Fussprogramm", "Fussprogramm", "Kr&auml;ftigung Hand", "Kr&auml;ftigung Hand", "Bewegungsprogramm", "Entspannungsprogramm", "Eigenes Programm"];
 var IdExercise = ["7", "8", "11", "12", "101", "201", "401"];
-var E_Name = ["Dorsalflexion", "Eversion", "Hand Dorsalextension", "Hand Kneifkraft", "Schwimmen", "Lesen", "Titel"];
+var E_Name = ["Dorsalflexion", "Eversion", "Hand Dorsalextension", "Hand Kneifkraft", "Schwimmen", "Lesen", "Meine &Uumlbung"];
 var E_Description = [
 "Setzen Sie Ihren gesunden Fuss auf den Fussr&uuml;cken Ihres verletzen Fusses und erzeugen Sie dabei eine entsprechende Spannung auf den Vorfuss.", 
 "Ein doppeltes Deuserband kommt &uuml;ber beide Fussr&uuml;cken. Bewegen Sie Ihr verletztes Bein maximal nach aussen, so dass das Deuserband maximal gespannt wird. Dann wird nur die Ferse auf den Boden gestellt.", 
@@ -19,7 +19,7 @@ var R = ["12", "8", "4", "20", "-", "-", "-"];
 var W = ["-", "-", "1.5", "-", "-", "-", "-"];
 var D = ["-", "-", "00:00:10", "00:00:15", "00:30:00", "00:30:00", "00:30:00"];
 var Re = ["00:00:30", "00:00:30", "00:00:30", "00:00:10", "-", "00:15:00", "00:00:00"];
-var Ref = ["Fuss_Dorsalflexion_Anspannungsuebung.png", "Fuss_Eversion_Sitz.png", "Hand_Hand_Dorsalextension.png", "Hand_Hand_Kneifkraft.png", "Schwimmen.png", "Lesen.png", "no_img.png" ];
+var Ref = ["Fuss_Dorsalflexion_Anspannungsuebung.png", "Fuss_Eversion_Sitz.png", "Hand_Hand_Dorsalextension.png", "Hand_Hand_Kneifkraft.png", "Schwimmen.png", "Lesen.png", "no_imgage.png" ];
 
 // document.getElementById("refresh").addEventListener('click', function() {
     // db.transaction(deleteTable, errorCB, successCB);
