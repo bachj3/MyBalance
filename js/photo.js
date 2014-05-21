@@ -23,7 +23,7 @@ function onPhotoDataSuccess(imageData) {
 
   // Get image handle
   //
-  var smallImage = document.getElementById('smallImage');
+  var smallImage = document.getElementById('img_selfie');
 
   // Unhide image elements
   //
@@ -44,7 +44,7 @@ function onPhotoURISuccess(imageURI) {
 
   // Get image handle
   //
-  var largeImage = document.getElementById('largeImage');
+  var largeImage = document.getElementById('img_selfie');
 
   // Unhide image elements
   //
