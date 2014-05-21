@@ -12,7 +12,7 @@
 
 		<!-- phonegap-scripts -->
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+		<!-- <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> -->
 
 		<!-- jquery-scripts -->
 		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
@@ -25,26 +25,26 @@
 
 		<div data-role="page" id="page_camera" class="page">
 			<div data-role="header" data-position="fixed" >
-				<h1>Camera</h1>
+				<h1>Foto</h1>
 				<a data-role="button" data-transition="slide" id="btn_back" href="page_exercise_detail_selfie.html">zur&uumlck</a>
 			</div>
 			<div data-role="content">
 
-				<button onclick="capturePhoto();">
-					Capture Photo
-				</button>
-				<br>
+				<a data-role="button" onclick="capturePhoto();" data-theme="e">
+					neues Foto erstellen
+				</a>
+				<!-- <br>
 				<button onclick="capturePhotoEdit();">
 					Capture Editable Photo
-				</button>
+				</button> -->
 				<br>
-				<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">
+				<!-- <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">
 					From Photo Library
-				</button>
-				<br>
-				<button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">
-					From Photo Album
-				</button>
+				</button> -->
+				<!-- <br> -->
+				<a data-role="button" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);" data-theme="e">
+					Foto aus Album ausw&aumlhlen
+				</a>
 				<br>
 				<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
 				<img style="display:none;" id="largeImage" src="" />
@@ -69,7 +69,7 @@
 			<script type="text/javascript" src="js/main.js"></script>
 			<script type="text/javascript" src="js/fastclick.js"></script>
 			<script type="text/javascript" src="js/purl.js"></script>
-			<script type="text/javascript" src="js/camera3.js"></script>
+			<script type="text/javascript" src="js/page_photo.js"></script>
 
 		</div>
 
