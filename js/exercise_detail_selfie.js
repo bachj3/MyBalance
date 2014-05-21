@@ -27,6 +27,7 @@ function getExercises(tx) {
 
     tx.executeSql('SELECT * FROM Program WHERE idExercise=' + IdExe, [], function(tx, results) {
         // WHERE idExercise=' + IdEx
+        console.log("ref: " + results.rows.item(i).Ref);
 
         for (var i = 0; i < results.rows.length; i++) {
             document.getElementById('e_ref').src = 'img/' + results.rows.item(i).Ref;
