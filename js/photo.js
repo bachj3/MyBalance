@@ -41,6 +41,7 @@ function onPhotoURISuccess(imageURI) {
     console.log("onPhotoURISuccess");
   // Uncomment to view the image file URI 
   // console.log(imageURI);
+  alert(imageURI);
 
   // Get image handle
   //
