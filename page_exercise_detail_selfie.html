@@ -40,12 +40,7 @@
 
 				<!-- Bilder -->
 
-				<a data-role="button" id="img_btn" href="#popupPhoto" data-rel="popup" data-position-to="window"> <img id="img_selfie" style="display:none;width:60px;" src="img/no_image.png"> </a>
-<!-- <br>
-				<img style="display:none;width:50%;" id="smallImage" src="" />
-				<img style="display:none;width:50%;" id="largeImage" src="" /> -->
-
-
+				<a data-role="button" id="img_btn" href="#popupPhoto" data-rel="popup" data-position-to="window"> <img id="img_selfie" src="img/no_image.png" style="display:none;width:120px;" > </a>
 
 				<!-- Beschreibung -->
 				<textarea cols="40" rows="8" name="txt_description" id="txt_description"></textarea>
@@ -129,7 +124,7 @@
 				<p >
 					<form >
 						<div style="padding:10px 20px;" >
-							<a data-role="button" onclick="capturePhoto();" data-theme="e"> neues Foto erstellen </a>
+							<a data-role="button" type="submit" onclick="capturePhoto();" data-theme="e"> neues Foto erstellen </a>
 							<!-- <br>
 							<button onclick="capturePhotoEdit();">
 							Capture Editable Photo
@@ -139,7 +134,7 @@
 							From Photo Library
 							</button> -->
 							<!-- <br> -->
-							<a data-role="button" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);" data-theme="e"> Foto aus Album ausw&aumlhlen </a>
+							<a data-role="button" type="submit" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);" data-theme="e"> Foto aus Album ausw&aumlhlen </a>
 
 						</div>
 					</form>
