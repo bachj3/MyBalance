@@ -40,7 +40,7 @@
 
 				<!-- Bilder -->
 
-				<a data-role="button" id="img_btn" href="page_photo.html">
+				<a data-role="button" id="img_btn" href="#popupPhoto" data-rel="popup" data-position-to="window">
 					<img id="img_selfie" src="img/no_image.png">
 				</a>
 
@@ -121,6 +121,34 @@
 					</ul>
 				</div>
 			</div>
+			<!-- Popup Photo  -->
+			<div data-role="popup" id="popupPhoto">
+				<p >
+					<form >
+						<div style="padding:10px 20px;" >
+							<a data-role="button" onclick="capturePhoto();" data-theme="e">
+					neues Foto erstellen
+				</a>
+				<!-- <br>
+				<button onclick="capturePhotoEdit();">
+					Capture Editable Photo
+				</button> -->
+				<br>
+				<!-- <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">
+					From Photo Library
+				</button> -->
+				<!-- <br> -->
+				<a data-role="button" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);" data-theme="e">
+					Foto aus Album ausw&aumlhlen
+				</a>
+				<br>
+				<img style="display:none;width:50%;" id="smallImage" src="" />
+				<img style="display:none;width:50%;" id="largeImage" src="" />
+
+						</div>
+					</form>
+				<p>
+			</div>
 			<!-- Popup Schmerzerfassung -->
 			<div data-role="popup" id="popupPain">
 				<p>
@@ -168,6 +196,7 @@
 			<script type="text/javascript" src="js/main.js"></script>
 			<script type="text/javascript" src="js/fastclick.js"></script>
 			<script type="text/javascript" src="js/purl.js"></script>
+			<script type="text/javascript" src="js/photo.js"></script>
 		</div>
 
 	</body>
