@@ -48,7 +48,8 @@ function doThisOnClick(IdProg) {
     console.log(IdProg);
     $.mobile.changePage("page_exercise_list.html", {
         data : {
-            IdProg : encodeURIComponent(IdProg)
+            IdProg : encodeURIComponent(IdProg),
+            category : encodeURIComponent(category)
         }
     });
 

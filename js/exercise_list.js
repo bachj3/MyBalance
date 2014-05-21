@@ -3,6 +3,7 @@ console.log("load script exercise_list");
 var db = null;
 var results = 0;
 var IdProg = null;
+var category = null;
 
 $(document).on('pagebeforeshow', '#page_exercise_list', function(event, ui) {
 
@@ -13,6 +14,12 @@ $(document).on('pagebeforeshow', '#page_exercise_list', function(event, ui) {
     if (IdProg != undefined)
         IdProg = decodeURIComponent(IdProg);
     console.log("IdProg nach Decoding: " + IdProg);
+
+    category = purl(url).param('category');
+    // console.log("category: " + category);
+    if (category != undefined)
+        category = decodeURIComponent(category);
+    console.log("category nach Decoding: " + category);
 
     db.transaction(getExerciseList, errorCB, successCB);
 });
@@ -39,12 +46,39 @@ function getExerciseList(tx) {
 }
 
 function doThisOnClick_ex(IdExe) {
-     console.log("doThisOnClick_ex: " + IdExe);
-    $.mobile.changePage("page_exercise_detail_therapy.html", {
-        data : {
-            IdExe : encodeURIComponent(IdExe)
-        }
-    });
+    console.log("doThisOnClick_ex: " + IdExe);
+
+    if (category == "1") {
+        $.mobile.changePage("page_exercise_detail_activity.html", {
+            data : {
+                IdExe : encodeURIComponent(IdExe)
+            }
+        });
+    }
+    
+    else if (category == "2") {
+        $.mobile.changePage("page_exercise_detail_relax.html", {
+            data : {
+                IdExe : encodeURIComponent(IdExe)
+            }
+        });
+    }
+    
+    else if (category == "3") {
+        $.mobile.changePage("page_exercise_detail_therapy.html", {
+            data : {
+                IdExe : encodeURIComponent(IdExe)
+            }
+        });
+    }
+    
+    else if (category == "4") {
+        $.mobile.changePage("page_exercise_detail_selfie.html", {
+            data : {
+                IdExe : encodeURIComponent(IdExe)
+            }
+        });
+    }
 
 }
 

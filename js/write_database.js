@@ -1,23 +1,25 @@
 console.log("script write_database");
 var db = null;
 
-var IdCategory = ["3", "3", "3", "3", "1"];
-var IdProgram = ["2", "2", "1", "1", "100"];
-var P_Name = ["Fussprogramm", "Fussprogramm", "Kr&auml;ftigung Hand", "Kr&auml;ftigung Hand", "Bewegungsprogramm"];
-var IdExercise = ["7", "8", "11", "12", "101"];
-var E_Name = ["Dorsalflexion", "Eversion", "Hand Dorsalextension", "Hand Kneifkraft", "Schwimmen"];
+var IdCategory = ["3", "3", "3", "3", "1", "2", "4"];
+var IdProgram = ["2", "2", "1", "1", "100", "200", "400"];
+var P_Name = ["Fussprogramm", "Fussprogramm", "Kr&auml;ftigung Hand", "Kr&auml;ftigung Hand", "Bewegungsprogramm", "Entspannungsprogramm", "Eigenes Programm"];
+var IdExercise = ["7", "8", "11", "12", "101", "201", "401"];
+var E_Name = ["Dorsalflexion", "Eversion", "Hand Dorsalextension", "Hand Kneifkraft", "Schwimmen", "Lesen", "Titel"];
 var E_Description = [
 "Setzen Sie Ihren gesunden Fuss auf den Fussr&uuml;cken Ihres verletzen Fusses und erzeugen Sie dabei eine entsprechende Spannung auf den Vorfuss.", 
 "Ein doppeltes Deuserband kommt &uuml;ber beide Fussr&uuml;cken. Bewegen Sie Ihr verletztes Bein maximal nach aussen, so dass das Deuserband maximal gespannt wird. Dann wird nur die Ferse auf den Boden gestellt.", 
 "Ellbogen 90&deg; gebeugt, nach aussen gedrehter Arm. In dieser Position liegt der Handr&uuml;cken auf der Waage. Mit der Hand kr&auml;ftig das Gewicht auf die Waage dr&uuml;cken. Die Spannung halten und die &Uuml;bung wiederholen.", 
 "Kneten Sie den Therapieball.", 
-"TestBeschreibung"];
-var S = ["2", "3", "2", "3"];
-var R = ["12", "8", "4", "20"];
-var W = ["-", "-", "1.5", "-"];
-var D = ["-", "-", "00:00:10", "00:00:15"];
-var Re = ["00:00:30", "00:00:30", "00:00:30", "00:00:10"];
-var Ref = ["Fuss_Dorsalflexion_Anspannungsuebung.png", "Fuss_Eversion_Sitz.png", "Hand_Hand_Dorsalextension.png", "Hand_Hand_Kneifkraft.png", "Schwimmen.png" ];
+"Schwimmen bietet eine ideale Kombination von Ausdauer, Muskelaufbau und Fettverbrennung.",
+"Lesen Sie doch wieder einmal ein Buch",
+"-"];
+var S = ["2", "3", "2", "3", "-", "-", "-"];
+var R = ["12", "8", "4", "20", "-", "-", "-"];
+var W = ["-", "-", "1.5", "-", "-", "-", "-"];
+var D = ["-", "-", "00:00:10", "00:00:15", "00:30:00", "00:30:00", "00:30:00"];
+var Re = ["00:00:30", "00:00:30", "00:00:30", "00:00:10", "-", "00:15:00", "00:00:00"];
+var Ref = ["Fuss_Dorsalflexion_Anspannungsuebung.png", "Fuss_Eversion_Sitz.png", "Hand_Hand_Dorsalextension.png", "Hand_Hand_Kneifkraft.png", "Schwimmen.png", "Lesen.png", "no_img.png" ];
 
 // document.getElementById("refresh").addEventListener('click', function() {
     // db.transaction(deleteTable, errorCB, successCB);
@@ -30,7 +32,7 @@ var Ref = ["Fuss_Dorsalflexion_Anspannungsuebung.png", "Fuss_Eversion_Sitz.png",
 document.addEventListener("deviceready", function() {
     db = window.openDatabase("Physio", "1.0", "physio", 2000000);
     console.log("deviceready_write_database");
-    // db.transaction(deleteTable, errorCB, successCB);
+    db.transaction(deleteTable, errorCB, successCB);
     db.transaction(writeExercises, errorCB, successCB);
     console.log("table filled");
 }, false);
@@ -53,6 +55,7 @@ function writeExercises(tx) {
 
 function errorCB(tx, err) {
     console.log(err);
+    alert(err);
 }
 
 function successCB() {

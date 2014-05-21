@@ -33,7 +33,6 @@ function onPhotoDataSuccess(imageData) {
   // The inline CSS rules are used to resize the image
   //
   img_selfie.src = "data:image/jpeg;base64," + imageData;
-  $(document).find('no_img').remove();
 }
 
 // Called when a photo is successfully retrieved
@@ -56,7 +55,7 @@ function onPhotoURISuccess(imageURI) {
   // The inline CSS rules are used to resize the image
   //
   img_selfie.src = imageURI;
-  $(document).find('no_img').remove();
+
 }
 
 // A button will call this function

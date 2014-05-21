@@ -12,7 +12,6 @@ function diffImage() {
         // Slider wird initialisiert
         $('.slider').slider();
 
-<<<<<<< HEAD
         $('#slider_food').slider('enable');
         // Value des Sliders wird auf 5 gesetzt
         $('#slider_food').val("5");
@@ -28,17 +27,7 @@ function diffImage() {
         $('#slider_relaxation').slider('enable');
         $('#slider_relaxation').val("5");
         $('#slider_relaxation').slider('disable');
-=======
-        // Value des Sliders wird auf 5 gesetzt
-        $('#slider_food').val("5");
-        // Der Slider wird refreshed um den neuen Wert anzuzeigen
-        $('#slider_food').slider('refresh');
-        
-        $('#slider_activity').val("5");
-        $('#slider_activity').slider('refresh');
-        
-        $('#slider_relaxation').val("5");
->>>>>>> FETCH_HEAD
+
         $('#slider_relaxation').slider('refresh');
 
     } else {
@@ -47,7 +36,6 @@ function diffImage() {
 
         $('.slider').slider();
 
-<<<<<<< HEAD
         $('#slider_food').slider('enable');
         $('#slider_food').val("6");
         $('#slider_food').slider('disable');
@@ -61,15 +49,7 @@ function diffImage() {
         $('#slider_relaxation').slider('enable');
         $('#slider_relaxation').val("7");
         $('#slider_relaxation').slider('disable');
-=======
-        $('#slider_food').val("6");
-        $('#slider_food').slider('refresh');
-        
-        $('#slider_activity').val("7");
-        $('#slider_activity').slider('refresh');
-        
-        $('#slider_relaxation').val("7");
->>>>>>> FETCH_HEAD
+
         $('#slider_relaxation').slider('refresh');
 
     }
