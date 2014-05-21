@@ -28,7 +28,7 @@
 			<div data-role="header" id="titel_exercise" data-position="fixed" data-add-back-btn="true">
 
 				<h1>
-				<input type="text" name="selfie_title" id="selfie_title" value="" placeholder="Titel">
+				<input type="text" name="selfie_title" id="e_name" value="" placeholder="Titel">
 				</h1>
 
 				<a data-transition="slide" id="btn_back" href="page_physio.html">zur&uumlck</a>
@@ -46,50 +46,54 @@
 				</button>
 
 				<!-- Beschreibung -->
-				<textarea cols="40" rows="8" name="txt_description" id="txt_description"></textarea>
+				<textarea cols="40" rows="8" name="txt_description" id="e_description"></textarea>
 				<a>-----------</a>
 
 				<!-- Details -->
 				<div id="grid_physioExercise4" class="ui-grid-d">
 
+					<!-- Sets -->
 					<div class="ui-block-a">
-						<input type="text" name="input_sets" id="input_sets" value="-"  />
+						<!-- <label id="set_value">0</label> -->
+						<input type="text" name="set_value" id="set_value" value="0"  />
 					</div>
-
 					<div class="ui-block-b">
-						<label for="input_sets">S&aumltze &nbsp &agrave; </label>
+						<label for="set_value">S&aumltze &nbsp &agrave; </label>
 					</div>
-
+					<!-- Repetitions -->
 					<div class="ui-block-c">
-						<input type="text" name="input_repetition" id="input_repetition" value="-"  />
+						<!-- <label id="repetitions_value">0</label> -->
+						<input type="text" name="repetitions" id="repetitions_value" value="0"  />
 					</div>
-
 					<div class="ui-block-d">
-						<label for="input_repetition">Wiederholungen</label>
+						<label for="repetitions_value">Wiederholungen</label>
 					</div>
 				</div>
 
 				<div id="grid_physioExercise2" class="ui-grid-a">
-
+					<!-- Weight -->
 					<div class="ui-block-a">
-						<label for="input_weight">Gewicht</label>
+						<label for="weight_value">Gewicht</label>
 					</div>
 					<div class="ui-block-b">
-						<input type="text" name="input_weight" id="input_repetition" value="-"  />
+						<!-- <label id="weight_value">0</label> -->
+						<input type="text" name="weight" id="weight_value" value="0"  />
 					</div>
-
+					<!-- Duration -->
 					<div class="ui-block-a">
-						<label for="input_duration">Dauer</label>
+						<label for="duration_value">Dauer</label>
 					</div>
 					<div class="ui-block-b">
-						<input type="text" name="input_duration" id="input_repetition" value="-"  />
+						<!-- <label id="duration_value">0</label> -->
+						<input type="text" name="duration" id="duration_value" value="0"  />
 					</div>
-
+					<!-- Rest -->
 					<div class="ui-block-a">
-						<span id="lbl_descriptionEx_break">Pause</span>
+						<label for="repetition_value">Pause</label>
 					</div>
 					<div class="ui-block-b">
-						<input type="text" name="input_repetition" id="input_repetition" value="-"  />
+						<!-- <label id="rest_value">0</label> -->
+						<input type="text" name="rest" id="rest_value" value="0"  />
 					</div>
 				</div>
 
