@@ -19,7 +19,7 @@ function onPhotoDataSuccess(imageData) {
     console.log("onPhotoDataSuccess");
   // Uncomment to view the base64 encoded image data
   // console.log(imageData);
-  alert(imageData);
+  // alert(imageData);
 
   // Get image handle
   //
@@ -41,7 +41,7 @@ function onPhotoURISuccess(imageURI) {
     console.log("onPhotoURISuccess");
   // Uncomment to view the image file URI 
   // console.log(imageURI);
-  alert(imageURI);
+  // alert(imageURI);
 
   // Get image handle
   //
