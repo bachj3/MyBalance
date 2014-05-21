@@ -23,16 +23,17 @@ function onPhotoDataSuccess(imageData) {
 
   // Get image handle
   //
-  var smallImage = document.getElementById('img_selfie');
+  var img_selfie = document.getElementById('img_selfie');
 
   // Unhide image elements
   //
-  smallImage.style.display = 'block';
+  img_selfie.style.display = 'block';
 
   // Show the captured photo
   // The inline CSS rules are used to resize the image
   //
-  smallImage.src = "data:image/jpeg;base64," + imageData;
+  img_selfie.src = "data:image/jpeg;base64," + imageData;
+  $(this).find('no_img').remove();
 }
 
 // Called when a photo is successfully retrieved
@@ -45,16 +46,17 @@ function onPhotoURISuccess(imageURI) {
 
   // Get image handle
   //
-  var largeImage = document.getElementById('img_selfie');
+  var img_selfie = document.getElementById('img_selfie');
 
   // Unhide image elements
   //
-  largeImage.style.display = 'block';
+  img_selfie.style.display = 'block';
 
   // Show the captured photo
   // The inline CSS rules are used to resize the image
   //
-  largeImage.src = imageURI;
+  img_selfie.src = imageURI;
+  $(this).find('no_img').remove();
 }
 
 // A button will call this function
