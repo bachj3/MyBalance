@@ -47,13 +47,13 @@
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
 <!-- EnableViewportScale (boolean, defaults to false): Set to true to use a viewport meta tag to either disable or restrict the range of user scaling. -->
-	<preference name="EnableViewportScale" value="true"/>
+<!-- 	<preference name="EnableViewportScale" value="true"/> -->
 <!-- 	FadeSplashScreen (boolean, defaults to true): Set to false to prevent the splash screen from fading in and out when its display state changes. -->
-	<preference name="FadeSplashScreen" value="false"/>
+<!-- 	<preference name="FadeSplashScreen" value="false"/> -->
 <!-- 	ShowSplashScreenSpinner (boolean, defaults to true): Set to false to hide the splash-screen spinner. -->
-	<preference name="ShowSplashScreenSpinner" value="false"/>
+<!-- 	<preference name="ShowSplashScreenSpinner" value="false"/> -->
 <!-- 	PageLength (float, defaults to 0): The size of each page, in points, in the direction that the pages flow. When PaginationMode is right to left or left to right, this property represents the width of each page. When PaginationMode is topToBottom or bottomToTop, this property represents the height of each page. The default value is 0, which means the layout uses the size of the viewport to determine the dimensions of the page. -->
-	<preference name="PageLength" value="0"/>
+<!-- 	<preference name="PageLength" value="0"/> -->
 	
     <!-- Plugins can also be added here. -->
     <!--
