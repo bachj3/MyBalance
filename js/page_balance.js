@@ -5,8 +5,9 @@ document.getElementById('balance_image').addEventListener('click', diffImage, fa
 function diffImage() {
     var img = document.getElementById("balance_image");
 
+    // Überprüfung, welches Bild angezeigt wird
     if (img.src.match(/unbalanced/)) {
-
+        // Ändern des Quellpfades für das Bild
         img.src = "img/icn/balanced.png";
 
         // Slider wird initialisiert
