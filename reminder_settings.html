@@ -25,90 +25,87 @@
 	<body>
 		<div data-role="page" id="page_reminder_settings" class="page">
 			<div data-role="header" id="titel_exercise" data-position="fixed" data-add-back-btn="true">
-				<!-- <a data-role="button" data-transition="none" id="btn_back" href="page_dashboard.html">zur&uumlck</a> -->
 				<h1>Erinnerung</h1>
 			</div>
 			<div data-role="content" >
 				<div data-role="collapsible" data-theme="e">
 					<h3>Zeitabh&aumlngige Erinnerung</h3>
-					<p>
-						<div class="ui-grid-a" >
-							<div class="ui-block-a">
-								<div class="ui-field-contain" >
-									<select data-mini="true" data-theme="e">
-										<option value="red">--</option>
-										<option value="red">05</option>
-										<option value="green">06</option>
-										<option value="blue">07</option>
-										<option value="red">08</option>
-										<option value="green">09</option>
-										<option value="blue">10</option>
-										<option value="red">11</option>
-										<option value="green">12</option>
-										<option value="blue">13</option>
-										<option value="red">14</option>
-										<option value="green">15</option>
-										<option value="blue">16</option>
-										<option value="red">17</option>
-										<option value="green">18</option>
-										<option value="blue">19</option>
-										<option value="red">20</option>
-										<option value="green">21</option>
-										<option value="blue">22</option>
-									</select>
-								</div>
-							</div>
-							<div class="ui-block-b">
-								<div class="ui-field-contain">
-
-									<select data-mini="true" data-theme="e">
-										<option value="red">--</option>
-										<option value="red">00</option>
-										<option value="red">15</option>
-										<option value="red">30</option>
-										<option value="green">45</option>
-									</select>
-								</div>
+					<div class="ui-grid-a" >
+						<div class="ui-block-a">
+							<div class="ui-field-contain" >
+								<select data-mini="true" data-theme="e">
+									<option value="-">--</option>
+									<option value="05">05</option>
+									<option value="06">06</option>
+									<option value="07">07</option>
+									<option value="08">08</option>
+									<option value="09">09</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+								</select>
 							</div>
 						</div>
-						<div data-role="fieldcontain">
-							<fieldset data-role="controlgroup" id="daysOfWeek" data-mini="true" data-theme="c">
-								<legend>
-									Wiederholung:
-								</legend>
-								<input type="checkbox" id="checkbox1">
-								<label for="checkbox1">Montag</label>
-								<input type="checkbox" id="checkbox2">
-								<label for="checkbox2">Dienstag</label>
-								<input type="checkbox" id="checkbox3">
-								<label for="checkbox3">Mittwoch</label>
-								<input type="checkbox" id="checkbox4">
-								<label for="checkbox4">Donnerstag</label>
-								<input type="checkbox" id="checkbox5">
-								<label for="checkbox5">Freitag</label>
-								<input type="checkbox" id="checkbox6">
-								<label for="checkbox6">Samstag</label>
-								<input type="checkbox" id="checkbox7">
-								<label for="checkbox7">Sonntag</label>
-							</fieldset>
-						</div>
-						<!-- Speichern - Button innerhalb Grid-Layout -->
-						<div id="button_save" align=:"right">
-							<a data-role="button" id="btn_Save" data-theme="b">Speichern</a>
-						</div>
+						<div class="ui-block-b">
+							<div class="ui-field-contain">
 
-					</p>
+								<select data-mini="true" data-theme="e">
+									<option value="-">--</option>
+									<option value="00">00</option>
+									<option value="15">15</option>
+									<option value="30">30</option>
+									<option value="45">45</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup" id="daysOfWeek" data-mini="true" data-theme="c">
+							<legend>
+								Wiederholung:
+							</legend>
+							<input type="checkbox" id="checkbox1">
+							<label for="checkbox1">Montag</label>
+							<input type="checkbox" id="checkbox2">
+							<label for="checkbox2">Dienstag</label>
+							<input type="checkbox" id="checkbox3">
+							<label for="checkbox3">Mittwoch</label>
+							<input type="checkbox" id="checkbox4">
+							<label for="checkbox4">Donnerstag</label>
+							<input type="checkbox" id="checkbox5">
+							<label for="checkbox5">Freitag</label>
+							<input type="checkbox" id="checkbox6">
+							<label for="checkbox6">Samstag</label>
+							<input type="checkbox" id="checkbox7">
+							<label for="checkbox7">Sonntag</label>
+						</fieldset>
+					</div>
+					<!-- Speichern - Button innerhalb Grid-Layout -->
+					<div id="button_save" align=:"right">
+						<a data-role="button" id="btn_Save" data-theme="b">Speichern</a>
+					</div>
+
 				</div>
 				<div data-role="collapsible" data-theme="e">
 					<h3>Ortsabh&aumlngige Erinnerung</h3>
-					<p>
-						<a href="#ref" id="place" data-transition="slide" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e">Ort</a>
-						<!-- Speichern - Button innerhalb Grid-Layout -->
-						<div id="button_save" align=:"right">
-							<a data-role="button" id="btn_Save" data-theme="b">Speichern</a>
-						</div>
+
+					<a href="#ref" id="place" data-transition="slide" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e">Ort</a>
+					<!-- Speichern - Button innerhalb Grid-Layout -->
+					<div id="button_save" align=:"right">
+						<a data-role="button" id="btn_Save" data-theme="b">Speichern</a>
+					</div>
 				</div>
-				</p>
+
 			</div>
 
 			<!-- Footer -->
