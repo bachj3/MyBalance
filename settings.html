@@ -24,27 +24,22 @@
 
 	<body>
 		<div data-role="page" id="page_personalsettings" class="page">
-			<div data-role="header" data-position="fixed" id="#header" data-add-back-btn="true">
-				<!-- <a data-role="button" data-transition="none" id="btn_back" href="page_dashboard.html">zur&uumlck</a> -->
+			<div data-role="header" data-position="fixed" id="#header" data-back-btn-text="zurück" data-direction="reverse" data-add-back-btn="true">
 				<h1>Einstellungen</h1>
-				<!-- <a href="#popupSettings" data-icon="gear" data-iconpos="notext" data-rel="popup" class="ui-btn-right" data-position-to="window">Options</a> -->
 			</div>
 			<div data-role="content">
-				<!-- Bildli -->
+				<!-- Bild -->
 				<img id="settings_image"src="img/icn/profil.png" width="30px" heigth="30px" style="display: block; margin: 0 auto">
-
-				<!-- Form -->
-
+				<!-- Name -->
 				<div class="ui-field-contain" data-type="horizontal">
 					<label for="name">Name</label>
 					<input type="text" name="text" id="name" value="" placeholder="Ihr Name?">
 				</div>
-
+				<!-- Geburtstag -->
 				<fieldset data-role="controlgroup" data-mini="true" data-type="horizontal" data-theme="e">
 					<legend>
 						Geburtstag
 					</legend>
-
 					<select name="SelDateOfBirthDay" id="SelDateOfBirthDay" >
 						<option value="">Tag</option>
 						<option value="1">1</option>
@@ -64,7 +59,7 @@
 						<option value="2019">2009</option>
 					</select>
 				</fieldset>
-
+				<!-- Grösse -->
 				<div class="ui-field-contain">
 					<label for="size">Gr&oumlsse</label>
 					<select id="size" name="size" data-mini="true" data-theme="e">
@@ -73,7 +68,7 @@
 						<option value="160">160</option>
 					</select>
 				</div>
-
+				<!-- Gewicht -->
 				<div class="ui-field-contain">
 					<label for="weight">Gewicht</label>
 					<select id="weight" name="weight" data-mini="true" data-theme="e">
@@ -81,7 +76,7 @@
 						<option value="55">55</option>
 						<option value="65">65</option>
 					</select>
-
+					<!-- Geschlecht -->
 				</div>
 				<fieldset data-role="controlgroup" data-mini="true" data-theme="c">
 					<legend>
@@ -89,13 +84,10 @@
 					</legend>
 					<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
 					<label for="radio-choice-1">weiblich</label>
-
 					<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
 					<label for="radio-choice-2">m&aumlnnlich</label>
 				</fieldset>
-
-				<!-- <a href="reminder_settings.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="d">Erinnerungen</a> -->
-
+				<!-- Speichern -->
 				<a href="settings.html" data-role="button" data-inline="false" data-theme="b">Speichern</a>
 			</div>
 			<!-- Footer -->
