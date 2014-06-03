@@ -1,72 +1,92 @@
-alert("photo.js");
+var pictureSource;   // picture source
+var destinationType; // sets the format of returned value 
 
-var pictureSource;
-var destinationType;
+// Wait for PhoneGap to connect with the device
+//
+document.addEventListener("deviceready",onDeviceReady,false);
 
-document.addEventListener("deviceready", onDeviceReady, false);
-
+// PhoneGap is ready to be used!
+//
 function onDeviceReady() {
     console.log("onDeviceReady");
-    pictureSource = navigator.camera.PictureSourceType;
-    destinationType = navigator.camera.DestinationType;
+    pictureSource=navigator.camera.PictureSourceType;
+    destinationType=navigator.camera.DestinationType;
 }
 
+// Called when a photo is successfully retrieved
 //
 function onPhotoDataSuccess(imageData) {
     console.log("onPhotoDataSuccess");
-    // console.log(imageData);
-    // alert(imageData);
+  // Uncomment to view the base64 encoded image data
+  // console.log(imageData);
+  // alert(imageData);
 
-    var img_selfie = document.getElementById('e_ref');
+  // Get image handle
+  //
+  var img_selfie = document.getElementById('e_ref');
 
-    img_selfie.style.display = 'block';
+  // Unhide image elements
+  //
+  img_selfie.style.display = 'block';
 
-    img_selfie.src = "data:image/jpeg;base64," + imageData;
+  // Show the captured photo
+  // The inline CSS rules are used to resize the image
+  //
+  img_selfie.src = "data:image/jpeg;base64," + imageData;
 }
 
+// Called when a photo is successfully retrieved
+//
 function onPhotoURISuccess(imageURI) {
     console.log("onPhotoURISuccess");
-    // console.log(imageURI);
-    // alert(imageURI);
+  // Uncomment to view the image file URI 
+  // console.log(imageURI);
+  // alert(imageURI);
 
-    var img_selfie = document.getElementById('e_ref');
+  // Get image handle
+  //
+  var img_selfie = document.getElementById('e_ref');
 
-    img_selfie.style.display = 'block';
+  // Unhide image elements
+  //
+  img_selfie.style.display = 'block';
 
-    // Zeigt das gemachte Foto an
-    img_selfie.src = imageURI;
+  // Show the captured photo
+  // The inline CSS rules are used to resize the image
+  //
+  img_selfie.src = imageURI;
+
 }
 
+// A button will call this function
+//
 function capturePhoto() {
     console.log("capturePhoto");
-    // Erstellt ein Foto als base64-encoded string
-    navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
-        destinationType : Camera.DestinationType.FILE_URI,
-        quality : 50
-    });
+  // Take picture using device camera and retrieve image as base64-encoded string
+  navigator.camera.getPicture(onPhotoDataSuccess, onFail, {destinationType: Camera.DestinationType.FILE_URI, quality: 50 });
 }
 
+// A button will call this function
+//
 function capturePhotoEdit() {
     console.log("capturePhotoEdit");
-    // Macht ein Foto und erlaubt es zu editieren
-    navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
-        destinationType : Camera.DestinationType.FILE_URI,
-        quality : 20,
-        allowEdit : true
-    });
+  // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+  navigator.camera.getPicture(onPhotoDataSuccess, onFail, { destinationType: Camera.DestinationType.FILE_URI,quality: 20, allowEdit: true }); 
 }
 
+// A button will call this function
+//
 function getPhoto(source) {
     console.log("getPhoto");
-    // Holt Foto vom entsprechenden Pfad
-    navigator.camera.getPicture(onPhotoURISuccess, onFail, {
-        quality : 50,
-        destinationType : Camera.DestinationType.FILE_URI,
-        sourceType : source
-    });
+  // Retrieve image file location from specified source
+  navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
+    destinationType: Camera.DestinationType.FILE_URI,
+    sourceType: source });
 }
 
+// Called if something bad happens.
+// 
 function onFail(message) {
-    alert('Failed because: ' + message);
-    conole.log('Failed because: ' + message);
+  // alert('Failed because: ' + message);
+  conole.log('Failed because: ' + message);
 }
