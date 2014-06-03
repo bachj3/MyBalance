@@ -9,14 +9,12 @@ $(document).on('pagebeforeshow', '#page_exercise_list', function(event, ui) {
 
     // Übergabewert von page_program_list
     var url = document.location;
+    console.log(url);
     IdProg = purl(url).param('IdProg');
-    // console.log("IdProg: " + IdProg);
     if (IdProg != undefined)
         IdProg = decodeURIComponent(IdProg);
-    console.log("IdProg nach Decoding: " + IdProg);
 
     category = purl(url).param('category');
-    // console.log("category: " + category);
     if (category != undefined)
         category = decodeURIComponent(category);
     console.log("category nach Decoding: " + category);
@@ -24,9 +22,9 @@ $(document).on('pagebeforeshow', '#page_exercise_list', function(event, ui) {
     db.transaction(getExerciseList, errorCB, successCB);
 });
 
+// öffnet die Datenbank Physio
 document.addEventListener("deviceready", function() {
     db = window.openDatabase("Physio", "1.0", "physio", 2000000);
-    console.log("deviceready_exercise_list");
 }, false);
 
 function getExerciseList(tx) {
