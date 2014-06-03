@@ -52,7 +52,7 @@
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
-<!--     <plugin name="Camera" value="org.apache.cordova.CameraLauncher" /> -->
+    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
 	<gap:plugin name="org.apache.cordova.core.camera" />
 
     <!-- Define app icon for each platform. -->
