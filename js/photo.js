@@ -12,6 +12,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     alert("onDeviceReady");
     console.log("onDeviceReady");
+    alert(navigator.camera.PictureSourceType);
+    alert(navigator.camera.DestinationType);
     pictureSource = navigator.camera.PictureSourceType;
     destinationType = navigator.camera.DestinationType;
     alert(pictureSource);
