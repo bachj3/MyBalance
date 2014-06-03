@@ -1,4 +1,5 @@
 console.log("script exercise_detail_selfie");
+alert("script exercise_detail_selfie");
 
 var db = null;
 var results = 0;
@@ -29,7 +30,7 @@ function getExercises(tx) {
         // WHERE idExercise=' + IdEx
 
         for (var i = 0; i < results.rows.length; i++) {
-             console.log("ref: " + results.rows.item(i).Ref);
+            console.log("ref: " + results.rows.item(i).Ref);
              
             document.getElementById('e_ref').src = 'img/' + results.rows.item(i).Ref;
             // document.getElementById('e_name').value = results.rows.item(i).E_Name;
