@@ -1,3 +1,4 @@
+alert("photo.js");
 var pictureSource;   // picture source
 var destinationType; // sets the format of returned value 
 
@@ -8,6 +9,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 // PhoneGap is ready to be used!
 //
 function onDeviceReady() {
+    alert("onDeviceReady");
     console.log("onDeviceReady");
     pictureSource=navigator.camera.PictureSourceType;
     destinationType=navigator.camera.DestinationType;
@@ -68,11 +70,11 @@ function capturePhoto() {
 
 // A button will call this function
 //
-function capturePhotoEdit() {
-    console.log("capturePhotoEdit");
-  // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
-  navigator.camera.getPicture(onPhotoDataSuccess, onFail, { destinationType: Camera.DestinationType.FILE_URI,quality: 20, allowEdit: true }); 
-}
+// function capturePhotoEdit() {
+    // console.log("capturePhotoEdit");
+  // // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+  // navigator.camera.getPicture(onPhotoDataSuccess, onFail, { destinationType: Camera.DestinationType.FILE_URI,quality: 20, allowEdit: true }); 
+// }
 
 // A button will call this function
 //

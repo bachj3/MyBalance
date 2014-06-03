@@ -1,5 +1,4 @@
 console.log("script exercise_detail_selfie");
-alert("script exercise_detail_selfie");
 
 var db = null;
 var results = 0;
@@ -51,6 +50,5 @@ function errorCB(tx, err) {
 }
 
 function successCB() {
-    alert("successCB_exercise_list");
     console.log("successCB_exercise_list");
 }
