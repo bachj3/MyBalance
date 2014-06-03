@@ -1,3 +1,5 @@
+alert("photo.js");
+
 var pictureSource;
 var destinationType;
 
