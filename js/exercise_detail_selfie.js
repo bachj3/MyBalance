@@ -27,7 +27,6 @@ function getExercises(tx) {
     console.log("IdExe: " + IdExe);
 
     tx.executeSql('SELECT * FROM Program WHERE idExercise=' + IdExe, [], function(tx, results) {
-        // WHERE idExercise=' + IdEx
 
         for (var i = 0; i < results.rows.length; i++) {
             console.log("ref: " + results.rows.item(i).Ref);
@@ -47,11 +46,11 @@ function getExercises(tx) {
 }
 
 function errorCB(tx, err) {
-    // alert(err);
+    alert(err);
     console.log(err);
 }
 
 function successCB() {
-    // alert("ok list filler");
+    alert("successCB_exercise_list");
     console.log("successCB_exercise_list");
 }
