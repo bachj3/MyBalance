@@ -89,6 +89,6 @@ function getPhoto(source) {
 // Called if something bad happens.
 // 
 function onFail(message) {
-  // alert('Failed because: ' + message);
+  alert('Failed because: ' + message);
   conole.log('Failed because: ' + message);
 }
