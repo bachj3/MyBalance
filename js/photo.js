@@ -13,7 +13,7 @@ function onPhotoDataSuccess(imageData) {
 
     var img_selfie = document.getElementById('e_ref');
     img_selfie.style.display = 'block';
-    img_selfie.src = "data:image/jpeg;base64," + imageData;
+    img_selfie.src = "data:image/jpeg;base64, " + imageData;
 }
 
 
