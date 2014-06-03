@@ -34,11 +34,11 @@ function getExercises(tx) {
             document.getElementById('e_ref').src = 'img/' + results.rows.item(i).Reference;
             document.getElementById('e_name').innerHTML = results.rows.item(i).E_Name;
             document.getElementById('e_description').innerHTML = results.rows.item(i).E_Description;
-            document.getElementById('set_value').value = results.rows.item(i).Set;
-            document.getElementById('repetitions_value').value = results.rows.item(i).Repetition;
-            document.getElementById('weight_value').value = results.rows.item(i).Weight;
-            document.getElementById('duration_value').value = results.rows.item(i).Duration;
-            document.getElementById('rest_value').value = results.rows.item(i).Rest;
+            document.getElementById('set_value').value = results.rows.item(i).S;
+            document.getElementById('repetitions_value').value = results.rows.item(i).R;
+            document.getElementById('weight_value').value = results.rows.item(i).W;
+            document.getElementById('duration_value').value = results.rows.item(i).D;
+            document.getElementById('rest_value').value = results.rows.item(i).Re;
         }
     }, errorCB);
 
