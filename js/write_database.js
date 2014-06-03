@@ -14,7 +14,7 @@ var W = ["-", "-", "1.5", "-", "-", "-", "-"];
 var D = ["-", "-", "00:00:10", "00:00:15", "00:30:00", "00:30:00", "00:30:00"];
 var Re = ["00:00:30", "00:00:30", "00:00:30", "00:00:10", "-", "00:15:00", "00:00:00"];
 var Ref = ["Fuss_Dorsalflexion_Anspannungsuebung.png", "Fuss_Eversion_Sitz.png", "Hand_Hand_Dorsalextension.png", "Hand_Hand_Kneifkraft.png", "Schwimmen.png", "Lesen.png", "Camera.png"];
-var Ref = ["-", "-", "-", "-", "-", "-", "-"];
+var I = ["-", "-", "-", "-", "-", "-", "-"];
 
 // wartet darauf, dass das Gerät bereit ist
 document.addEventListener("deviceready", function() {
