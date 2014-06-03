@@ -14,7 +14,6 @@ var W = ["-", "-", "1.5", "-", "-", "-", "-"];
 var D = ["-", "-", "00:00:10", "00:00:15", "00:30:00", "00:30:00", "00:30:00"];
 var Re = ["00:00:30", "00:00:30", "00:00:30", "00:00:10", "-", "00:15:00", "00:00:00"];
 var Ref = ["Fuss_Dorsalflexion_Anspannungsuebung.png", "Fuss_Eversion_Sitz.png", "Hand_Hand_Dorsalextension.png", "Hand_Hand_Kneifkraft.png", "Schwimmen.png", "Lesen.png", "Camera.png"];
-var I = ["-", "-", "-", "-", "-", "-", "-"];
 
 // wartet darauf, dass das Gerät bereit ist
 document.addEventListener("deviceready", function() {
@@ -36,12 +35,12 @@ function deleteTable(tx) {
 
 // schreibt die Datensätze in die Tabelle Program
 function writeExercises(tx) {
-    tx.executeSql('CREATE TABLE IF NOT EXISTS Program(id unique, idCategory, idProgram, P_Name, idExercise, E_Name, E_Description, Set, Repetition, Weight, Duration, Rest, Reference, Intensity)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS Program(id unique, idCategory, idProgram, P_Name, idExercise, E_Name, E_Description, S, R, W, D, Re, Ref)');
 
 // iteriert durch alle Listenelemente und schreibt sie in die Tabelle
     for (var i = 0; i < IdCategory.length; i++) {
         var index = i + 1;
-        tx.executeSql('INSERT INTO Program(id, idCategory, idProgram, P_Name, idExercise, E_Name, E_Description, Set, Repetition, Weight, Duration, Rest, Reference, Intensity) VALUES (' + index + ', "' + IdCategory[i] + '", ' + IdProgram[i] + ', "' + P_Name[i] + '", ' + IdExercise[i] + ', "' + E_Name[i] + '", "' + E_Description[i] + '", "' + S[i] + '", "' + R[i] + '", "' + W[i] + '", "' + D[i] + '", "' + Re[i] + '", "' + Ref[i] + '", "' + I[i] + '")');
+        tx.executeSql('INSERT INTO Program(id, idCategory, idProgram, P_Name, idExercise, E_Name, E_Description, S, R, W, D, Re, Ref) VALUES (' + index + ', "' + IdCategory[i] + '", ' + IdProgram[i] + ', "' + P_Name[i] + '", ' + IdExercise[i] + ', "' + E_Name[i] + '", "' + E_Description[i] + '", "' + S[i] + '", "' + R[i] + '", "' + W[i] + '", "' + D[i] + '", "' + Re[i] + '", "' + Ref[i] + '")');
     }
 }
 
