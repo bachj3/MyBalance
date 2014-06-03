@@ -31,7 +31,8 @@ function getExercises(tx) {
         for (var i = 0; i < results.rows.length; i++) {
             document.getElementById('e_ref').src = 'img/' + results.rows.item(i).Ref;
             document.getElementById('e_name').innerHTML = results.rows.item(i).E_Name;
-            document.getElementById('e_description').innerHTML = results.rows.item(i).E_Description;       
+            document.getElementById('e_description').innerHTML = results.rows.item(i).E_Description;
+            
             document.getElementById('duration_value').value = results.rows.item(i).D;
 
         }

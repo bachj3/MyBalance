@@ -43,9 +43,11 @@ function getExercises(tx) {
 }
 
 function errorCB(tx, err) {
+    // alert(err);
     console.log(err);
 }
 
 function successCB() {
+    // alert("ok list filler");
     console.log("successCB_exercise_list");
 }

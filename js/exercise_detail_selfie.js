@@ -26,9 +26,10 @@ function getExercises(tx) {
     console.log("IdExe: " + IdExe);
 
     tx.executeSql('SELECT * FROM Program WHERE idExercise=' + IdExe, [], function(tx, results) {
+        // WHERE idExercise=' + IdEx
 
         for (var i = 0; i < results.rows.length; i++) {
-            console.log("ref: " + results.rows.item(i).Ref);
+             console.log("ref: " + results.rows.item(i).Ref);
              
             document.getElementById('e_ref').src = 'img/' + results.rows.item(i).Ref;
             // document.getElementById('e_name').value = results.rows.item(i).E_Name;
@@ -45,10 +46,11 @@ function getExercises(tx) {
 }
 
 function errorCB(tx, err) {
-    alert(err);
+    // alert(err);
     console.log(err);
 }
 
 function successCB() {
+    // alert("ok list filler");
     console.log("successCB_exercise_list");
 }

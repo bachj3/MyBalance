@@ -2,8 +2,8 @@
 <html>
 
 	<head>
-		<title>MyPhysioApp</title>
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<title>MyBalance</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Theme comes first, then structure. -->
 		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
@@ -13,11 +13,12 @@
 
 		<!-- phonegap-scripts -->
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+		<!-- <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> -->
 
 		<!-- jquery-scripts -->
 		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
+
 	</head>
 
 	<body>
@@ -27,13 +28,19 @@
 
 				<h1 id="e_name">0</h1>
 
+				<!-- <h1>
+				<input type="text" name="selfie_title" id="e_name" value="" placeholder="Titel">
+				</h1> -->
+
 				<a data-transition="slide" id="btn_back" href="page_physio.html">zur&uumlck</a>
+				<!-- <a href="#ref" data-transition="slide" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">n&aumlchste</a> -->
 			</div>
 
 			<!-- Grid-Layout Uebungsdetails -->
 			<div data-role="content">
 
 				<!-- Bilder -->
+
 				<a data-role="button" id="img_btn" style="background:transparent;border:none;" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"> <img id="e_ref" src="" style="width:50%;alignment-baseline: center;"> </a>
 
 				<!-- Beschreibung -->
@@ -125,6 +132,15 @@
 							<button onclick="capturePhoto();" data-theme="e">
 								neues Foto erstellen
 							</button>
+							<!-- <br>
+							<button onclick="capturePhotoEdit();">
+							Capture Editable Photo
+							</button> -->
+							<br>
+							<!-- <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">
+							From Photo Library
+							</button> -->
+							<!-- <br> -->
 							<button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);" data-theme="e">
 								Foto aus Album ausw&aumlhlen
 							</button>
@@ -182,7 +198,6 @@
 			<script type="text/javascript" src="js/purl.js"></script>
 			<script type="text/javascript" src="js/photo.js"></script>
 			<script type="text/javascript" src="js/exercise_detail_selfie.js"></script>
-			
 		</div>
 
 	</body>
