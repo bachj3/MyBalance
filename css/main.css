@@ -1,3 +1,4 @@
+/*Definition der Kacheln*/
 .kachel {
 	padding:15% 0;
 	margin:5px;
@@ -8,10 +9,12 @@
 div.page {
 	-webkit-transform:translate3d(0,0,0);
 }
+/*Transparenter Bild-Button*/
 #img_btn {
 	background:transparent;
 	border:none;
 }
+/*Balance-Button*/
 #balance_img_btn {
 	background:transparent;
 	border:none !important;
@@ -24,11 +27,13 @@ div.page {
 .ui-btn-active {
 	background:#686869 !important;
 }
+/*vierspaltiges Grid - Spalte 1*/
 #grid_physioExercise4 .ui-block-a {
 	width:15% !important;
 	vertical-align:middle;
 	line-height:65px;
 }
+/*vierspaltiges Grid - Spalte 2*/
 #grid_physioExercise4 .ui-block-b {
 	width:25% !important;
 	vertical-align:middle;
@@ -38,11 +43,13 @@ div.page {
 	margin-right:auto;
 	text-align:center;
 }
+/*vierspaltiges Grid - Spalte 3*/
 #grid_physioExercise4 .ui-block-c {
 	width:15% !important;
 	vertical-align:middle;
 	line-height:65px;
 }
+/*vierspaltiges Grid - Spalte 4*/
 #grid_physioExercise4 .ui-block-d {
 	width:25% !important;
 	vertical-align:middle;
@@ -52,49 +59,57 @@ div.page {
 	margin-right:auto;
 	text-align:center;
 }
+/*zweispaltiges Grid - Spalte 1*/
 #grid_physioExercise2 .ui-block-a {
 	width:40% !important;
 	vertical-align:middle;
 	line-height:50px;
 }
+/*zweispaltiges Grid - Spalte 2*/
 #grid_physioExercise2 .ui-block-b {
 	width:30% !important;
 	vertical-align:middle;
 	line-height:50px;
 }
+/*zweispaltiges Grid - Spalte 1*/
 #grid_physioOverview .ui-block-a {
 	width:25% !important;
 	vertical-align:middle;
 	line-height:50px;
 }
+/*zweispaltiges Grid - Spalte 2*/
 #grid_physioOverview .ui-block-b {
 	width:75% !important;
 	vertical-align:middle;
 	line-height:50px;
 }
+/*zweispaltiges Grid - Spalte 1*/
 #grid_settings .ui-block-a {
 	width:50% !important;
 	vertical-align:middle;
 	line-height:65px;
 }
+/*zweispaltiges Grid - Spalte 2*/
 #grid_settings .ui-block-b {
 	width:50% !important;
 }
+/*zweispaltiges Grid - Spalte 1*/
 #grid_progressOutput .ui-block-a {
 	width:50% !important;
 	vertical-align:middle;
-	/*margin-top: 20px*/
 	margin:0 auto;
 	margin-left:auto;
 	margin-right:auto;
 	line-height:50px;
 	text-align:left;
 }
+/*zweispaltiges Grid - Spalte 2*/
 #grid_progressOutput .ui-block-b {
 	width:50% !important;
 	vertical-align:middle;
 	line-height:65px;
 }
+/*custom nav-bar item*/
 .nav-custom .ui-btn {
 	padding-top:40px !important;
 }
