@@ -1,7 +1,6 @@
-// Bei einem Klick auf das Bild, wird das Bild geändert und die Slider entsprechend angepasst
-
 document.getElementById('balance_image').addEventListener('click', diffImage, false);
 
+// Bei einem Klick auf das Bild, wird das Bild geändert und die Slider entsprechend angepasst
 function diffImage() {
     var img = document.getElementById("balance_image");
 
@@ -33,12 +32,15 @@ function diffImage() {
 
     } else {
 
+        // Ändern des Quellpfades für das Bild
         img.src = "img/icn/unbalanced.png";
-
+        // Slider wird initialisiert
         $('.slider').slider();
 
         $('#slider_food').slider('enable');
+        // Value des Sliders wird auf 6 gesetzt
         $('#slider_food').val("6");
+        // Der Slider wird refreshed um den neuen Wert anzuzeigen
         $('#slider_food').slider('disable');
         $('#slider_food').slider('refresh');
 
@@ -52,6 +54,5 @@ function diffImage() {
         $('#slider_relaxation').slider('disable');
 
         $('#slider_relaxation').slider('refresh');
-
     }
 }

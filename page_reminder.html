@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>MyBalance</title>
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-
 		<!-- Theme comes first, then structure. -->
 		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
 		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
 		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
 		<link href="css/main.css" rel="stylesheet">
-
 		<!-- phonegap-scripts -->
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-
 		<!-- jquery-scripts -->
 		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
-
 	</head>
-
 	<body>
 		<div data-role="page" id="page_reminder_settings" class="page">
+			<!-- Header -->
 			<div data-role="header" data-position="fixed" id="#header" data-back-btn-text="zurück" data-direction="reverse" data-add-back-btn="true">
 				<h1>Erinnerung</h1>
 			</div>
 			<div data-role="content" >
+				<!-- Zeitabhängige Erinnerung -->
 				<div data-role="collapsible" data-theme="e">
 					<h3>Zeitabh&aumlngige Erinnerung</h3>
 					<div class="ui-grid-a" >
 						<div class="ui-block-a">
+							<!-- Auswahl Stunden -->
 							<div class="ui-field-contain" >
 								<select data-mini="true" data-theme="e">
 									<option value="-">--</option>
@@ -55,8 +52,8 @@
 							</div>
 						</div>
 						<div class="ui-block-b">
+							<!-- Auswahl Minuten -->
 							<div class="ui-field-contain">
-
 								<select data-mini="true" data-theme="e">
 									<option value="-">--</option>
 									<option value="00">00</option>
@@ -67,6 +64,7 @@
 							</div>
 						</div>
 					</div>
+					<!-- Auswahl Wochentage -->
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup" id="daysOfWeek" data-mini="true" data-theme="c">
 							<legend>
@@ -88,24 +86,22 @@
 							<label for="checkbox7">Sonntag</label>
 						</fieldset>
 					</div>
-					<!-- Speichern - Button innerhalb Grid-Layout -->
-					<div id="button_save" align=:"right">
+					<!-- Speichern-Button -->
+					<div id="button_save">
 						<a data-role="button" id="btn_Save" data-theme="b">Speichern</a>
 					</div>
-
 				</div>
+				<!-- Ortsabhängige Erinnerung -->
 				<div data-role="collapsible" data-theme="e">
 					<h3>Ortsabh&aumlngige Erinnerung</h3>
-
+					<!-- Ort wählen-Button -->
 					<a href="#ref" id="place" data-transition="slide" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e">Ort</a>
-					<!-- Speichern - Button innerhalb Grid-Layout -->
+					<!-- Speichern-Button-->
 					<div id="button_save" align=:"right">
 						<a data-role="button" id="btn_Save" data-theme="b">Speichern</a>
 					</div>
 				</div>
-
 			</div>
-
 			<!-- Footer -->
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
@@ -124,5 +120,4 @@
 			</div>
 		</div>
 	</body>
-
 </html>

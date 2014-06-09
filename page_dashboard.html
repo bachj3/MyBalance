@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>MyBalance</title>
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-
 		<!-- Theme comes first, then structure. -->
 		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
 		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
 		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
 		<link href="css/main.css" rel="stylesheet">
-
 		<!-- phonegap-scripts -->
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-
 		<!-- jquery-scripts -->
 		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
-
 	</head>
-
 	<body>
 		<div data-role="page" id="page_Dashboard" class="page">
+			<!-- Header -->
 			<div data-role="header" data-position="fixed" id="#header" data-back-btn-text="zurück" data-direction="reverse" data-add-back-btn="false">
 				<h1>Dashboard</h1>
 			</div>
-
 			<div data-role="content" data-theme="e" id="#content">
 				<fieldset class="ui-grid-b">
+					<!-- Kachel Flüssigkeiten -->
 					<div class="ui-block-a">
 						<a href="#popupDrinks" class="kachel" data-rel="popup" data-role="button" data-position-to="window" data-inline="false" data-theme="g">Fl&uumlssigkeiten
 						</br></br>
@@ -40,34 +35,42 @@
 							</div>
 						</fieldset> </a>
 					</div>
+					<!-- Kachel Stimmung -->
 					<div class="ui-block-b">
 						<a href="#popupMood" class="kachel" data-rel="popup" data-role="button" data-position-to="window" data-inline="false" data-theme="f">Stimmung
 						</br></br> <img id="mood_image" src="img/icn/thumbs-up.png" width="30px" heigth="30px"></a>
 					</div>
+					<!-- Kachel Aktivität -->
 					<div class="ui-block-c">
 						<a href="#popupActivity" class="kachel" data-rel="popup" data-role="button" data-position-to="window" data-inline="false" data-theme="d">Aktivit&aumlt
 						</br></br> <img id="activity_image" src="img/icn/exercise.png" heigth="30px"></a>
 					</div>
+					<!-- Kachel Schlaf -->
 					<div class="ui-block-a">
 						<a href="#popupSleep" class="kachel" data-rel="popup" data-role="button" data-position-to="window" data-inline="false" data-theme="h">Schlaf
 						</br></br> <label id="lbl_sleep">8h 34</label></a>
 					</div>
+					<!-- Kahel Sitzen -->
 					<div class="ui-block-b">
 						<a href="#popupOffice" class="kachel" data-rel="popup" data-role="button" data-position-to="window" data-inline="false" data-theme="e">Sitzen
 						</br></br> <img id="office_image" src="img/icn/chair.png" heigth="30px"></a>
 					</div>
+					<!-- Kachel Verlauf -->
 					<div class="ui-block-c">
 						<a href="page_progress.html" class="kachel" data-transition="none" data-role="button" data-inline="false" data-theme="b">Verlauf
 						</br></br> <img id="statistic_image" src="img/icn/statistics.png" heigth="30px"></a>
 					</div>
+					<!-- Kachel Ernährung -->
 					<div class="ui-block-a">
 						<a href="#ref" class="kachel"  data-role="button" data-inline="false" data-theme="f">Ern&aumlhrung
 						</br></br> <img id="profile_image" src="img/icn/restaurant.png" width="30px" heigth="30px"> </a>
 					</div>
+					<!-- Kachel Profil -->
 					<div class="ui-block-b">
 						<a href="page_settings.html" class="kachel" data-transition="none" data-role="button" data-inline="false" data-theme="d">Profil
 						</br></br> <img id="profile_image" src="img/icn/profil.png" width="30px" height="30px"> </a>
 					</div>
+					<!-- Kachel Erinnerung -->
 					<div class="ui-block-c">
 						<a href="page_reminder.html" class="kachel" data-transition="none" data-role="button" data-inline="false" data-theme="g">Erinnerungen
 						</br></br> <img id="remind_image" src="img/icn/reminder.png" width="30px" heigth="30px"> </a>
@@ -87,7 +90,6 @@
 						<li>
 							<a href="page_physio.html" data-transition="slide" id="nav_physio" data-icon="custom" >Aktivit&aumlt</a>
 						</li>
-
 					</ul>
 				</div>
 			</div>
@@ -123,14 +125,12 @@
 					</form>
 				<p>
 			</div>
-
 			<!-- Popup Parameter-Aktivität  -->
 			<div data-role="popup" id="popupActivity">
 				<p >
 					<form >
 						<div style="padding:10px 20px;" >
 							<h3>Aktivit&aumlt erfassen</h3>
-
 							<select id="activityHrs" name="activityHrs" data-mini="true" data-theme="e" >
 								<option value="1">01 h</option>
 								<option value="2">02 h</option>
@@ -144,7 +144,6 @@
 								<option value="10">10 h</option>
 								<option value="11">mehr...</option>
 							</select>
-
 							<label for="slider_intensity">Intensit&aumlt</label>
 							<input type="range" id="slider_intensity" value="1" min="0" max="15" step="1" data-theme="e">
 							</br>
@@ -154,15 +153,13 @@
 							<button type="cancel" data-theme="a">
 								Abbrechen
 							</button>
-
+							<!-- Link zum Bereich Aktivität -->
 							<h3>Aktivit&aumlt ausf&uumlhren</h3>
 							<a href="page_physio.html" data-role="button"data-inline="false" data-theme="e">Zu den Aktivit&aumlten</a>
-
 						</div>
 					</form>
 				<p>
 			</div>
-
 			<!-- Popup Parameter-Schlaf  -->
 			<div data-role="popup" id="popupSleep">
 				<p>
@@ -193,7 +190,6 @@
 					</form>
 				<p>
 			</div>
-
 			<!-- Popup Parameter-Sitzen  -->
 			<div data-role="popup" id="popupOffice">
 				<p>
@@ -225,7 +221,6 @@
 					</form>
 				<p>
 			</div>
-
 			<!-- Popup Parameter-Flüssigkeiten  -->
 			<div data-role="popup" id="popupDrinks">
 				<p>
@@ -279,9 +274,6 @@
 			</div>
 			<script type="text/javascript" src="js/main.js"></script>
 			<script type="text/javascript" src="js/fastclick.js"></script>
-
 		</div>
-
 	</body>
-
 </html>

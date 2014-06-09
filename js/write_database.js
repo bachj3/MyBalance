@@ -1,7 +1,6 @@
-console.log("script write_database");
-
 var db = null;
 
+//Standardprogramme
 var IdCategory = ["3", "3", "3", "3", "1", "2", "4"];
 var IdProgram = ["2", "2", "1", "1", "100", "200", "400"];
 var P_Name = ["Fussprogramm", "Fussprogramm", "Kr&auml;ftigung Hand", "Kr&auml;ftigung Hand", "Bewegungsprogramm", "Entspannungsprogramm", "Eigenes Programm"];
@@ -30,7 +29,6 @@ document.addEventListener("deviceready", function() {
 // löscht die Tabelle Program
 function deleteTable(tx) {
     tx.executeSql('DROP TABLE IF EXISTS Program');
-
 }
 
 // schreibt die Datensätze in die Tabelle Program
@@ -44,11 +42,13 @@ function writeExercises(tx) {
     }
 }
 
+//onFail
 function errorCB(tx, err) {
     console.log(err);
     alert(err);
 }
 
+//onSucces
 function successCB() {
     console.log("successCB_write_database");
 }

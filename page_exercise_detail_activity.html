@@ -1,60 +1,45 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>MyBalance</title>
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-
 		<!-- Theme comes first, then structure. -->
 		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
 		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
 		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
 		<link href="css/main.css" rel="stylesheet">
-
 		<!-- phonegap-scripts -->
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-
 		<!-- jquery-scripts -->
 		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
-
 	</head>
-
 	<body>
-
 		<div data-role="page" id="page_exercise_detail_activity" class="page">
+			<!-- Header -->
 			<div data-role="header" data-position="fixed" id="#header" data-back-btn-text="zurück" data-direction="reverse" data-add-back-btn="true">
 				<h1 id="e_name">0</h1>
-
 			</div>
-
-			<!-- Grid-Layout Uebungsdetails -->
 			<div data-role="content">
-
 				<!-- Bilder -->
-
 				<a data-role="button" id="img_btn"> <img id="e_ref" src=""> </a>
-
-				<!-- <video src="img/video.mp4" type="video/mp4"></video> -->
-
 				<!-- Beschreibung -->
 				<label id="e_description">0</label>
 				<a>-----------</a>
-
+				<!-- Details -->
 				<div id="grid_physioExercise2" class="ui-grid-a">
-
 					<!-- Duration -->
 					<div class="ui-block-a">
 						<label for="duration_value">Dauer</label>
 					</div>
 					<div class="ui-block-b">
-						<!-- <label id="duration_value">0</label> -->
 						<input type="text" name="duration" id="duration_value" value="0"  />
 					</div>
 				</div>
+				<!-- Intensität -->
 				<label for="slider_intensity">Intensit&aumlt</label>
 				<input type="range" id="slider_intensity" value="1" min="0" max="15" step="1" data-theme="e">
-
+				<!-- Button Bestätigung -->
 				<div id="grid_physioExercise_confirm" class="ui-grid-solo">
 					<a data-role="button" id="btn_bestaetigung" data-shadow="false" data-theme="b">Best&aumltigung</a>
 				</div>
@@ -80,7 +65,5 @@
 			<script type="text/javascript" src="js/purl.js"></script>
 			<script type="text/javascript" src="js/exercise_detail_activity.js"></script>
 		</div>
-
 	</body>
-
 </html>

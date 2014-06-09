@@ -1,70 +1,59 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>MyPhysioApp</title>
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-
 		<!-- Theme comes first, then structure. -->
 		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
 		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
 		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
 		<link href="css/main.css" rel="stylesheet">
-
 		<!-- phonegap-scripts -->
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-
 		<!-- jquery-scripts -->
 		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
-
 	</head>
-
 	<body>
-
 		<div data-role="page" id="page_physio" class="page">
+			<!-- Header -->
 			<div data-role="header" data-position="fixed" id="#header" data-back-btn-text="zurück" data-direction="reverse" data-add-back-btn="false">
 				<h1>Aktivit&aumlt</h1>
 			</div>
 			<div data-role="content">
-
 				<div id="grid_physioOverview" class="ui-grid-a" >
-
+					<!-- Kategorie Bewegung -->
 					<div class="ui-block-a">
 						<img id="icon_exercise" src="img/icn/runner.png"  height="50px">
 					</div>
 					<div class="ui-block-b">
 						<a id="group_activity" data-transition="slide" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e">Bewegung</a>
-
 					</div>
+					<!-- Kategorie Erholung -->
 					<div class="ui-block-a">
 						<img id="icon_relax" src="img/icn/relax.png" height="50px">
 					</div>
 					<div class="ui-block-b">
 						<a id="group_relax" data-transition="slide" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e">Erholung</a>
-
 					</div>
-
+					<!-- Kategorie Therapie -->
 					<div class="ui-block-a">
 						<img id="icon_physio" src="img/icn/exercise.png" height="50px">
 					</div>
 					<div class="ui-block-b">
 						<a id="group_therapy" data-transition="slide" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e">Therapie</a>
-
 					</div>
-
+					<!-- Kategorie Eigene Programme -->
 					<div class="ui-block-a">
 						<img id="icon_personal" src="img/icn/profil.png" height="50px">
 					</div>
 					<div class="ui-block-b">
 						<a id="group_selfie" data-transition="slide" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e">Eigene Programme</a>
-
 					</div>
-
 				</div>
 			</div>
+			<!-- Footer -->
 			<div data-role="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-
 				<div data-role="navbar">
 					<ul>
 						<li>
@@ -82,12 +71,8 @@
 			<script type="text/javascript" src="js/main.js"></script>
 			<script type="text/javascript" src="js/fastclick.js"></script>
 			<script type="text/javascript" src="js/write_database.js"></script>
-			<script type="text/javascript" src="js/purl.js"></script>
+			<!-- <script type="text/javascript" src="js/purl.js"></script> -->
 			<script type="text/javascript" src="js/page_physio.js"></script>
-			
-
 		</div>
-
 	</body>
-
 </html>

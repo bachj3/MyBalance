@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>MyPhysioApp</title>
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-
 		<!-- Theme comes first, then structure. -->
 		<link href="css/jquery.mobile.squareui.css" rel="stylesheet">
 		<link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
 		<!-- remember that the custom file needs to appear after the standard jQuery Mobile file in your code. -->
 		<link href="css/main.css" rel="stylesheet">
-
 		<!-- phonegap-scripts -->
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-
 		<!-- jquery-scripts -->
 		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
-
 	</head>
-
 	<body>
-
 		<div data-role="page" id="page_program_list" class="page">
+			<!-- Header -->
 			<div data-role="header" data-position="fixed" id="#header" data-back-btn-text="zurück" data-direction="reverse" data-add-back-btn="true">
 				<h1>Programme</h1>
 			</div>
 			<div data-role="content">
-
+				<!-- Vorbereitete ListView für die Programme -->
 				<ul data-role="listview" data-inset="true" id="program_list" data-theme="e">
 					<!-- Inhalt von der Datenbank -->
 				</ul>
-
 			</div>
+			<!-- Footer -->
 			<div data-role="footer" data-position="fixed">
-
 				<div data-role="navbar">
 					<ul>
 						<li>
@@ -53,11 +46,6 @@
 			<script type="text/javascript" src="js/fastclick.js"></script>
 			<script type="text/javascript" src="js/purl.js"></script>
 			<script type="text/javascript" src="js/program_list.js"></script>
-			<!-- <script type="text/javascript" src="js/jquery.url.js"></script> -->
-			
-
 		</div>
-
 	</body>
-
 </html>
